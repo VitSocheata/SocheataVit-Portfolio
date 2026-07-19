@@ -13,6 +13,11 @@
       <h1 class="name-title mt-3"><span>Vit</span> Socheata</h1>
       <p class="description">Whether you're looking to discuss a new project, seek advice, or collaborate, I'm always
         excited to connect.</p>
+      <div class="mt-4">
+        <button class="btn-contact-large">
+          <i class="fab fa-linkedin fs-4"></i> Contact Me
+        </button>
+      </div>
     </div>
   </div>
 </template>
@@ -58,7 +63,7 @@ import socheata from '@/assets/images/sct.jpg'
   line-height: 1.1;
   margin: 0;
   color: #111827;
-   margin-top: 20px;
+  margin-top: 20px;
 }
 
 .name-title span {
