@@ -7,6 +7,7 @@
       <div class="nav-links">
         <a href="#">Home</a>
         <a href="#">Portfolio</a>
+        <a href="#">About Me</a>
         <a href="#">Contact</a>
       </div>
       <button class="btn-contact">Get In Touch</button>

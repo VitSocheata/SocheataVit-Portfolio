@@ -1,56 +1,73 @@
 <template>
   <div class="hero-container">
     <div class="content text-center mt-5">
-      <div class="profile-img-wrapper">
-        <img src="" class="profile-img" alt="Profile" />
-        <div class="floating-badge left">UX Design</div>
-        <div class="floating-badge right">Figma</div>
-      </div>
-      
-      <div class="mt-4">
-        <span class="badge-skill">Product Design</span>
-        <span class="badge-skill">UI/UX Design</span>
-        <span class="badge-skill">Web Design</span>
+      <div class="profile-img-wrapper mb-4">
+        <img :src="socheata" class="profile-img" alt="Profile" />
+        <div class="badge-container">
+          <span class="badge-skill">Product Design</span>
+          <span class="badge-skill">UI/UX Design</span>
+          <span class="badge-skill">Web Design</span>
+        </div>
       </div>
 
-      <h1 class="name-title mt-3">Vit Socheata</h1>
-      <p class="description">Whether you're looking to discuss a new project, seek advice, or collaborate, I'm always excited to connect.</p>
-      
-      <button class="btn-main-contact">Contact Me</button>
+      <h1 class="name-title mt-3"><span>Vit</span> Socheata</h1>
+      <p class="description">Whether you're looking to discuss a new project, seek advice, or collaborate, I'm always
+        excited to connect.</p>
     </div>
   </div>
 </template>
 
+<script setup>
+import socheata from '@/assets/images/sct.jpg'
+</script>
+
 <style scoped>
-.profile-img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  border: 5px solid white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-}
-.badge-skill {
-  background: #f3f4f6;
-  padding: 8px 16px;
-  border-radius: 20px;
-  margin: 0 5px;
-  font-weight: 500;
-}
 .profile-img-wrapper {
-  position: relative;
-  display: inline-block;
-  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.floating-badge {
-  position: absolute;
-  background: white;
-  padding: 5px 15px;
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 9px solid #fff;
+  box-shadow: 0 0 0 2px #e5e7eb;
+  object-fit: cover;
+}
+
+.badge-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 40px;
+}
+
+.badge-skill {
+  background: #ffffff;
+  padding: 6px 15px;
   border-radius: 50px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #e5e7eb;
   font-size: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
-.floating-badge.left { top: 20px; left: -50px; }
-.floating-badge.right { top: 20px; right: -50px; }
 
+.name-title {
+  font-size: 75px !important;
+  font-weight: 800;
+  line-height: 1.1;
+  margin: 0;
+  color: #111827;
+   margin-top: 20px;
+}
 
+.name-title span {
+  color: #6b7280;
+}
+
+.description {
+  margin-top: 20px;
+  color: #6b7280;
+  font-size: 18px;
+}
 </style>
