@@ -19,11 +19,19 @@
         </button>
       </div>
     </div>
+    <MyWork/>
+    <EducationSection/>
+    <SkillSet/>
+
   </div>
 </template>
 
 <script setup>
-import socheata from '@/assets/images/sct.jpg'
+import socheata from '@/assets/images/sct.JPEG'
+// import socheata from '@/assets/images/sct.jpg'
+import MyWork from './WorkHistory.vue';
+import EducationSection from './EducationSection.vue';
+import SkillSet from './SkillSet.vue';
 </script>
 
 <style scoped>
@@ -72,6 +80,7 @@ import socheata from '@/assets/images/sct.jpg'
 
 .description {
   margin-top: 20px;
+  padding-inline: 18px;
   color: #6b7280;
   font-size: 18px;
 }

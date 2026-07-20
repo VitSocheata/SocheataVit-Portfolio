@@ -74,3 +74,6 @@ body {
   transform: translateY(-2px);
 }
 
+.name-title span {
+  color: #6b7280;
+}
