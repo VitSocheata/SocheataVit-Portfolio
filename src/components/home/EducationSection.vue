@@ -51,7 +51,7 @@ const educationList = [
     {
     logo: chineseLogo, 
     school: "Confucius Institute of the Royal Academy of Cambodia",
-    course: "Chinese Language Program (HSK Level 3)",
+    course: "Chinese Language Program",
     date: "2024 - 2026", 
     description:
       "Completed Chinese language proficiency up to HSK Level 3, developing strong foundational listening, reading, and conversational skills.",
