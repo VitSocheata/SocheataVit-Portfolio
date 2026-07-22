@@ -98,8 +98,8 @@ const toggleMenu = () => {
   .nav-links {
     position: absolute;
     top: 40%;
-    left: 530px;
-    right: 60px;
+    left: 230px;
+    right: 50px;
     display: none;
     flex-direction: column;
     align-items: flex-start;
