@@ -51,26 +51,35 @@
 <script setup>
 import portfolio1 from "@/assets/images/reabList.png";
 import portfolio2 from "@/assets/images/pralong.png";
-
+import portfolio3 from "@/assets/images/internship.png";
 
 const projects = [
   {
     id: 1,
-    title: "Personal Portfolio",
+    title: "Internship Center",
     description:
-      "A modern portfolio website built with Vue 3 showcasing projects, skills, and experience with a clean responsive design.",
-    image: portfolio1,
-    tags: ["Vue 3", "CSS", "Responsive"],
-    link: "#",
+      "A responsive static website built using HTML, CSS, and Bootstrap, featuring modern layout designs and clean UI components.",
+    image: portfolio3,
+    tags: ["HTML", "CSS", "Bootstrap"],
+    link: "https://github.com/Oeun-nuphea/internship-center.git",
   },
   {
     id: 2,
-    title: "Task Management System",
+    title: "Reab List",
     description:
-      "A productivity application that allows users to create, update, and organize daily tasks using Vue and Pinia.",
+      "A dynamic productivity application built with Vue.js and JavaScript, allowing users to create, update, and manage tasks efficiently.",
+    image: portfolio1,
+    tags: ["JavaScript", "Vue.js", "Responsive"],
+    link: "https://github.com/kemvanny/Vue_Project_ANT.git",
+  },
+  {
+    id: 3,
+    title: "Pralong",
+    description:
+      "A robust backend server built with Node.js and Express, handling database connections, authentication, and RESTful API endpoints.",
     image: portfolio2,
-    tags: ["Vue", "Pinia", "REST API"],
-    link: "#",
+    tags: ["Node.js", "Express", "MySQL"],
+    link: "https://github.com/kemvanny/quiz_frontend.git",
   },
 ];
 </script>
@@ -116,16 +125,17 @@ const projects = [
 .project-image {
   width: 100%;
   height: 230px;
-  object-fit: cover;
 }
 
 .card-content {
   padding: 25px;
+  font-weight: 700px;
 }
 
 .card-content h3 {
   margin-bottom: 15px;
   font-size: 24px;
+  
 }
 
 .card-content p {
@@ -151,7 +161,7 @@ const projects = [
   display: inline-block;
   margin-top: 10px;
   text-decoration: none;
-  color: #2563eb;
+  color: #28b79a;
   font-weight: 600;
 }
 </style>
