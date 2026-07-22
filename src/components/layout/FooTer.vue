@@ -3,13 +3,13 @@
     <div class="container">
       <div class="footer-top">
 
-        <h2>Let's Stay Connected</h2>
+        <h2 class="name-title">Let's Build Something <span>Great Together</span></h2>
 
         <p>
           Whether you have a project in mind, a collaboration opportunity,
           or simply want to say hello, I'd love to hear from you.
         </p>
-          <BaseButton/>
+        <BaseButton />
       </div>
 
       <div class="divider"></div>
@@ -21,27 +21,21 @@
         </p>
 
         <div class="social-links">
-
-          <a href="#">
-            <i class="fab fa-x-twitter"></i>
+          <a href="https://github.com/VitSocheata" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
           </a>
-
-          <a href="#">
+          <a href="https://www.linkedin.com/in/socheata-vit" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin-in"></i>
           </a>
-
-          <a href="#">
-            <i class="fab fa-figma"></i>
+          <a href="https://t.me/socheatavit" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-telegram"></i>
           </a>
-
-          <a href="#">
-            <i class="fab fa-dribbble"></i>
+          <a href="https://www.facebook.com/share/1KTcAKZh2L/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-facebook-f"></i>
           </a>
-
-          <a href="#">
+          <a href="https://instagram.com/wei__yingying" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-instagram"></i>
           </a>
-
         </div>
 
       </div>
@@ -66,7 +60,7 @@ import BaseButton from '../common/BaseButton.vue';
   padding: 0 24px;
 }
 
-.logo img{
+.logo img {
   width: 80px;
 }
 
@@ -102,8 +96,6 @@ import BaseButton from '../common/BaseButton.vue';
   margin-bottom: 40px;
 }
 
-/* Button */
-
 .contact-btn {
   display: inline-flex;
   align-items: center;
@@ -131,14 +123,10 @@ import BaseButton from '../common/BaseButton.vue';
   transform: translateY(-3px);
 }
 
-/* Divider */
-
 .divider {
   margin: 80px 0 35px;
   border-top: 1px solid #e5e7eb;
 }
-
-/* Bottom */
 
 .footer-bottom {
   display: flex;
@@ -150,8 +138,6 @@ import BaseButton from '../common/BaseButton.vue';
   color: #6b7280;
   font-size: 15px;
 }
-
-/* Social */
 
 .social-links {
   display: flex;
@@ -181,8 +167,6 @@ import BaseButton from '../common/BaseButton.vue';
   border-color: #111827;
   transform: translateY(-3px);
 }
-
-/* Responsive */
 
 @media (max-width: 768px) {
 

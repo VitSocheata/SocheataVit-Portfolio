@@ -3,7 +3,7 @@
     <div class="container">
 
       <div class="section-header">
-        <h2>Portfolio</h2>
+        <h2 class="name-title">My <span>Portfolio</span></h2>
       </div>
 
       <div class="portfolio-grid">

@@ -8,10 +8,10 @@
         <span></span><span></span><span></span>
       </div>
       <div class="nav-links" :class="{ 'active': isMenuOpen }">
-        <a href="#">Home</a>
-        <a href="#">Portfolio</a>
-        <a href="#">About Me</a>
-        <a href="#">Contact</a>
+        <router-link :to="{name: 'home'}">Home</router-link>
+        <router-link :to="{name: 'portfolio'}">Portfolio</router-link>
+        <router-link :to="{name: 'aboutMe'}">About Me</router-link>
+        <router-link :to="{name: 'contact'}">Contact</router-link>
       </div>
       <button class="btn-contact"><i class="fab fa-linkedin fs-4"></i>Get In Touch</button>
     </nav>
@@ -70,6 +70,15 @@ const toggleMenu = () => {
 
 .btn-contact{
   font-size: 14px;
+}
+
+.nav-links a.router-link-active {
+  color: #151515 !important; 
+  font-weight: 700;          
+}
+
+.nav-links a.router-link-exact-active {
+  color: #151515 !important;
 }
 @media (max-width: 768px) {
 
