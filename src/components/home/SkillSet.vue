@@ -6,10 +6,10 @@
       </div>
       <div class="skill-content">
         <div class="skill-group">
-          <h3>Product</h3>
+          <h3>Backend</h3>
           <div class="tags">
             <span
-              v-for="(skill, index) in productSkills"
+              v-for="(skill, index) in backendSkills"
               :key="index"
             >
               {{ skill }}
@@ -17,11 +17,11 @@
           </div>
         </div>
         <div class="skill-group">
-          <h3>UX Design</h3>
+          <h3>Frontend</h3>
 
           <div class="tags">
             <span
-              v-for="(skill, index) in uxSkills"
+              v-for="(skill, index) in generalSkills"
               :key="index"
             >
               {{ skill }}
@@ -35,30 +35,26 @@
 </template>
 
 <script setup>
-const productSkills = [
-  "Design System",
-  "Lean UX",
-  "Agile Methodology",
-  "Data Analysis",
-  "Startups",
-  "Data-Driven Design",
-  "User Centered Design",
-  "UI Kits",
+const backendSkills = [
+  "Node.js",
+  "Express.js",
+  "MySQL",
+  "Database Design",
+  "RESTful APIs",
+  "Authentication (JWT)",
+  "Middleware",
+  "Git & GitHub Workflow",
 ];
 
-const uxSkills = [
-  "User Interviews",
-  "Surveys",
-  "Personas",
-  "Competitor Audits",
-  "User Journey Maps",
-  "Empathy Maps",
-  "User Stories",
-  "Usability Testing",
-  "A/B Testing",
-  "Mind Mapping",
-  "User Flows",
-  "Information Architecture",
+const generalSkills = [
+  "JavaScript (ES6+)",
+  "Vue.js",
+  "HTML5 & CSS3",
+  "Responsive Design",
+  "Problem Solving",
+  "API Integration",
+  "Team Collaboration",
+  "Debugging",
 ];
 </script>
 

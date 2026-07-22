@@ -22,6 +22,7 @@
     <MyWork/>
     <EducationSection/>
     <SkillSet/>
+    <Portfolio/>
 
   </div>
 </template>
@@ -32,6 +33,7 @@ import socheata from '@/assets/images/sct.JPEG'
 import MyWork from './WorkHistory.vue';
 import EducationSection from './EducationSection.vue';
 import SkillSet from './SkillSet.vue';
+import Portfolio from './Portfolio.vue';
 </script>
 
 <style scoped>
