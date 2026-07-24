@@ -32,9 +32,9 @@ defineProps({
   cursor: pointer;
   transition: all 0.3s ease;
   font-weight: 600;
-  padding: 10px 23px;
+  padding: 15px 23px;
   font-size: 16px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
   color:#475569;
 }
 

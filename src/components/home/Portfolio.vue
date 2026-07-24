@@ -85,7 +85,7 @@ const projects = [
 </script>
 <style scoped>
 .portfolio-section {
-  padding: 100px 0;
+  padding: 100px 0 0px ;
 }
 
 .container {

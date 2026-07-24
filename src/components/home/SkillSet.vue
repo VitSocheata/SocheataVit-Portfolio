@@ -60,7 +60,7 @@ const generalSkills = [
 
 <style scoped>
 .skill-section {
-  padding: 100px 0;
+  padding: 0px 100px 0;
   background: #fff;
 }
 

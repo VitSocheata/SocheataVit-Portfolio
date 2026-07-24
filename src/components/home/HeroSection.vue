@@ -3,14 +3,15 @@
     <div class="content text-center mt-5">
       <div class="profile-img-wrapper mb-4">
         <img :src="socheata" class="profile-img" alt="Profile" />
-        <div class="badge-container">
-          <span class="badge-skill">Vue.js</span>
-          <span class="badge-skill">Node.js</span>
-          <span class="badge-skill">MySQL</span>
-        </div>
+      </div>
+     
+      <h1 class="name-title mt-3"><span>Vit</span> Socheata</h1>
+
+      <div class="role-subtitle-wrapper">
+        <span class="role-subtitle">{{ displayedText }}</span>
+        <span class="typing-cursor">|</span>
       </div>
 
-      <h1 class="name-title mt-3"><span>Vit</span> Socheata</h1>
       <p class="description ">Whether you're looking to discuss a new project, seek advice, or collaborate, I'm always
         excited to connect.</p>
       <BaseButton />
@@ -21,7 +22,55 @@
 </template>
 
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import socheata from '@/assets/images/sct.JPEG'
+
+const roles = [
+  "Full Stack Developer",
+  "Frontend Developer",
+  "Vue.js Enthusiast",
+  "Robotics Instructor"
+];
+
+const displayedText = ref('');
+let roleIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let timeoutId = null;
+
+const typeEffect = () => {
+  const currentRole = roles[roleIndex];
+  
+  if (isDeleting) {
+    displayedText.value = currentRole.substring(0, charIndex - 1);
+    charIndex--;
+  } else {
+    displayedText.value = currentRole.substring(0, charIndex + 1);
+    charIndex++;
+  }
+  let typingSpeed = isDeleting ? 50 : 100;
+
+  if (!isDeleting && charIndex === currentRole.length) {
+    typingSpeed = 2000;
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    roleIndex = (roleIndex + 1) % roles.length;
+    typingSpeed = 500;
+  }
+
+  timeoutId = setTimeout(typeEffect, typingSpeed);
+};
+
+onMounted(() => {
+  typeEffect();
+});
+
+onUnmounted(() => {
+  clearTimeout(timeoutId); 
+});
+
+
 </script>
 
 <style scoped>
@@ -68,22 +117,6 @@ import socheata from '@/assets/images/sct.JPEG'
   box-shadow: 0 0 0 2px #e5e7eb;
   object-fit: cover;
 }
-
-.badge-container {
-  display: flex;
-  gap: 10px;
-  margin-top: 40px;
-}
-
-.badge-skill {
-  background: #ffffff;
-  padding: 6px 15px;
-  border-radius: 50px;
-  border: 1px solid #e5e7eb;
-  font-size: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
 .name-title {
   font-size: 75px !important;
   font-weight: 800;
@@ -97,8 +130,38 @@ import socheata from '@/assets/images/sct.JPEG'
   color: #6b7280;
 }
 
+.role-subtitle {
+  font-size: 1.5rem;
+  background: linear-gradient(135deg, #374151 0%, #9ca3af 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  margin: 0px;
+}
+
+.role-subtitle-wrapper {
+  font-size: 1.55rem;
+  font-weight: 600;
+  color: #2563eb; 
+  margin: 25px;
+  min-height: 30px; 
+  display: inline-flex;
+  align-items: center;
+}
+
+.typing-cursor {
+  font-weight: 300;
+  color: #495057;
+  animation: blink 0.7s infinite;
+  margin-left: 3px;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 .description {
-  margin: 20px 0px 35px 0px;
+  margin: 10px 0px 35px 0px;
   padding-inline: 18px;
   color: #6b7280;
   font-size: 18px;

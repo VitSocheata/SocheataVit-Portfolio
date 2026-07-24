@@ -70,7 +70,7 @@ const jobs = [
 
 <style scoped>
 .work-history {
-  padding: 100px 0;
+  padding: 0px 100px 0;
   background: #fff;
 }
 
@@ -98,7 +98,6 @@ const jobs = [
 
 .right {
   width: 70%;
-
   display: flex;
   flex-direction: column;
   gap: 30px;

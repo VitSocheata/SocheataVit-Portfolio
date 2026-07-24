@@ -47,7 +47,7 @@
 <style scoped>
 .footer {
   background: #ffffff;
-  padding: 100px 0 40px;
+  padding:  0px 100px 40px;
 }
 
 .container {
