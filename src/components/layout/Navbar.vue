@@ -1,5 +1,4 @@
 <template>
-  <div class="hero-container">
     <nav class="navbar-custom">
       <div class="logo">
         <img :src="logo" alt="">
@@ -13,15 +12,17 @@
         <router-link :to="{ name: 'home', hash: '#about' }">About Me</router-link>
         <router-link :to="{ name: 'home', hash: '#contact' }">Contact</router-link>
       </div>
-      <button class="btn-contact"><i class="fab fa-linkedin fs-4"></i>Get In Touch</button>
+      <div class="btn-contact">
+        <base-button  text="Get In Touch" />
+      </div>
       
     </nav>
-  </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import logo from '@/assets/images/download.png';
+
 const isMenuOpen = ref(false);
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value; 
@@ -47,7 +48,6 @@ html {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px); 
   z-index: 1000; 
-  box-shadow: 0 2px 10px rgba(0,0,0,.05); 
   min-height: 80px;
   box-sizing: border-box;
 }

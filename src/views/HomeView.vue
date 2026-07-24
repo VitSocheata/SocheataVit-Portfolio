@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div >
     <HeroSection/>
     <MyWork/>
     <EducationSection/>

@@ -13,11 +13,7 @@
       <h1 class="name-title mt-3"><span>Vit</span> Socheata</h1>
       <p class="description">Whether you're looking to discuss a new project, seek advice, or collaborate, I'm always
         excited to connect.</p>
-      <div class="mt-4">
-        <button class="btn-contact-large">
-          <i class="fab fa-linkedin fs-4"></i> Contact Me
-        </button>
-      </div>
+      <BaseButton />
     </div>
 
 
@@ -26,11 +22,38 @@
 
 <script setup>
 import socheata from '@/assets/images/sct.JPEG'
-// import socheata from '@/assets/images/sct.jpg'
-
 </script>
 
 <style scoped>
+.hero-container {
+  background-color: #ffffff; 
+  overflow: visible;
+  padding: 100px 0px;
+  
+}
+.hero-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%); 
+  width: 100%;    
+  height: 100%;
+  background-image: 
+    linear-gradient(#f3f3f3 1px, transparent 1px), 
+    linear-gradient(90deg, #f3f3f3 1px, transparent 1px);
+  background-size: 80px 80px; 
+  -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+  mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
+
+  z-index: 0; 
+  pointer-events: none; 
+}
+
+.content {
+  position: relative;
+  z-index: 0; 
+}
 .profile-img-wrapper {
   display: flex;
   flex-direction: column;

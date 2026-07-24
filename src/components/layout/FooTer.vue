@@ -44,10 +44,6 @@
   </footer>
 </template>
 
-<script setup>
-import BaseButton from '../common/BaseButton.vue';
-</script>
-
 <style scoped>
 .footer {
   background: #ffffff;
