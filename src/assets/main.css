@@ -9,6 +9,7 @@ body {
 .hero-container {
   background-color: #ffffff; 
  overflow: visible;
+ padding-top: 60px;
   
 }
 .hero-container::before {

@@ -1,5 +1,5 @@
 <template>
-  <section class="education-section">
+  <section id="about" class="education-section">
     <div class="container">
       <div class="name-title">
         <h2>Education <br />& <span>Courses</span></h2>

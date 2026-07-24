@@ -107,9 +107,9 @@ const generalSkills = [
 }
 
 .tags span {
-  padding: 12px 20px;
+  padding: 7px 20px;
   border: 1px solid #d1d5db;
-  border-radius: 999px;
+  border-radius: 10px;
 
   background: #fff;
   color: #374151;
@@ -161,7 +161,7 @@ const generalSkills = [
   }
 
   .tags span {
-    padding: 10px 16px;
+    padding: 7px 16px;
     font-size: 14px;
   }
 }

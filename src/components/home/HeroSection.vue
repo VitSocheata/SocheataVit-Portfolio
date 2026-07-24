@@ -1,12 +1,12 @@
 <template>
-  <div class="hero-container">
+  <div  id="home" class="hero-container">
     <div class="content text-center mt-5">
       <div class="profile-img-wrapper mb-4">
         <img :src="socheata" class="profile-img" alt="Profile" />
         <div class="badge-container">
-          <span class="badge-skill">Product Design</span>
-          <span class="badge-skill">UI/UX Design</span>
-          <span class="badge-skill">Web Design</span>
+          <span class="badge-skill">Vue.js</span>
+          <span class="badge-skill">Node.js</span>
+          <span class="badge-skill">MySQL</span>
         </div>
       </div>
 
@@ -19,10 +19,7 @@
         </button>
       </div>
     </div>
-    <MyWork/>
-    <EducationSection/>
-    <SkillSet/>
-    <Portfolio/>
+
 
   </div>
 </template>
@@ -30,10 +27,7 @@
 <script setup>
 import socheata from '@/assets/images/sct.JPEG'
 // import socheata from '@/assets/images/sct.jpg'
-import MyWork from './WorkHistory.vue';
-import EducationSection from './EducationSection.vue';
-import SkillSet from './SkillSet.vue';
-import Portfolio from './Portfolio.vue';
+
 </script>
 
 <style scoped>

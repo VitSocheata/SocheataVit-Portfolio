@@ -8,12 +8,13 @@
         <span></span><span></span><span></span>
       </div>
       <div class="nav-links" :class="{ 'active': isMenuOpen }">
-        <router-link :to="{name: 'home'}">Home</router-link>
-        <router-link :to="{name: 'portfolio'}">Portfolio</router-link>
-        <router-link :to="{name: 'aboutMe'}">About Me</router-link>
-        <router-link :to="{name: 'contact'}">Contact</router-link>
+        <router-link :to="{ name: 'home', hash: '#home' }">Home</router-link>
+        <router-link :to="{ name: 'home', hash: '#portfolio' }">Portfolio</router-link>
+        <router-link :to="{ name: 'home', hash: '#about' }">About Me</router-link>
+        <router-link :to="{ name: 'home', hash: '#contact' }">Contact</router-link>
       </div>
       <button class="btn-contact"><i class="fab fa-linkedin fs-4"></i>Get In Touch</button>
+      
     </nav>
   </div>
 </template>
@@ -29,14 +30,26 @@ const toggleMenu = () => {
 </script>
 
 <style scoped>
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px; 
+}
 
 .navbar-custom {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 50px;
-  position: relative !important;
+  padding: 0px 50px;
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px); 
+  z-index: 1000; 
+  box-shadow: 0 2px 10px rgba(0,0,0,.05); 
   min-height: 80px;
+  box-sizing: border-box;
 }
 .nav-links {
   display: flex;
@@ -60,6 +73,7 @@ const toggleMenu = () => {
   font-weight: 600;
   transition: color 0.3s ease;
   font-size: 14px;
+  cursor: pointer;
 }
 .nav-links a:hover {
   color: #000000; 
@@ -72,14 +86,12 @@ const toggleMenu = () => {
   font-size: 14px;
 }
 
-.nav-links a.router-link-active {
+.nav-links a.router-link-active,
+.nav-links a.router-link-exact-active {
   color: #151515 !important; 
   font-weight: 700;          
 }
 
-.nav-links a.router-link-exact-active {
-  color: #151515 !important;
-}
 @media (max-width: 768px) {
 
   .navbar-custom {
@@ -106,7 +118,7 @@ const toggleMenu = () => {
 
   .nav-links {
     position: absolute;
-    top: 40%;
+    top: 80px;
     left: 230px;
     right: 50px;
     display: none;
