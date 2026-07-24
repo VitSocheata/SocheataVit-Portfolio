@@ -1,22 +1,26 @@
 <template>
-    <nav class="navbar-custom">
+  <nav class="navbar-custom">
+    <div class="nav-container">
       <div class="logo">
         <img :src="logo" alt="">
       </div>
+
       <div class="menu-toggle" @click="toggleMenu">
         <span></span><span></span><span></span>
       </div>
+
       <div class="nav-links" :class="{ 'active': isMenuOpen }">
-        <router-link :to="{ name: 'home', hash: '#home' }">Home</router-link>
-        <router-link :to="{ name: 'home', hash: '#portfolio' }">Portfolio</router-link>
-        <router-link :to="{ name: 'home', hash: '#about' }">About Me</router-link>
-        <router-link :to="{ name: 'home', hash: '#contact' }">Contact</router-link>
+        <router-link to="/#home">Home</router-link>
+        <router-link to="/#portfolio">Portfolio</router-link>
+        <router-link to="/#about">About Me</router-link>
+        <router-link to="/#contact">Contact</router-link>
       </div>
+
       <div class="btn-contact">
-        <base-button  text="Get In Touch" />
+        <base-button text="Get In Touch" />
       </div>
-      
-    </nav>
+    </div>
+  </nav>
 </template>
 
 <script setup>
@@ -25,32 +29,40 @@ import logo from '@/assets/images/download.png';
 
 const isMenuOpen = ref(false);
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value; 
-  console.log("តម្លៃបច្ចុប្បន្នគឺ:", isMenuOpen.value); 
+  isMenuOpen.value = !isMenuOpen.value;
+  console.log("តម្លៃបច្ចុប្បន្នគឺ:", isMenuOpen.value);
 };
 </script>
 
 <style scoped>
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 100px; 
+  scroll-padding-top: 100px;
 }
 
 .navbar-custom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0px 50px;
   position: fixed !important;
   top: 0;
   left: 0;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px); 
-  z-index: 1000; 
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .05);
+  box-sizing: border-box;
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 27px;
   min-height: 80px;
   box-sizing: border-box;
 }
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -59,42 +71,38 @@ html {
   border-radius: 50px;
   padding: 15px 40px;
   border: 1px solid #f0f0f0;
-  box-shadow: 0 4px 15px rgba(0,0,0,.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
 }
-
 
 .menu-toggle {
   display: none;
 }
+
 .nav-links a {
   margin: 0 15px;
   text-decoration: none;
-  color: #475569; 
+  color: #475569;
   font-weight: 600;
   transition: color 0.3s ease;
   font-size: 14px;
   cursor: pointer;
 }
+
 .nav-links a:hover {
-  color: #000000; 
+  color: #000000;
 }
-.logo img{
+
+.logo img {
   width: 80px;
 }
 
-.btn-contact{
+.btn-contact {
   font-size: 14px;
 }
 
-.nav-links a.router-link-active,
-.nav-links a.router-link-exact-active {
-  color: #151515 !important; 
-  font-weight: 700;          
-}
 
 @media (max-width: 768px) {
-
-  .navbar-custom {
+  .nav-container {
     padding: 15px 20px;
   }
 
@@ -119,15 +127,15 @@ html {
   .nav-links {
     position: absolute;
     top: 80px;
-    left: 230px;
-    right: 50px;
+    left: 20px;
+    right: 20px;
     display: none;
     flex-direction: column;
     align-items: flex-start;
     padding: 20px;
     border-radius: 15px;
     background: white;
-    box-shadow: 0 10px 25px rgba(0,0,0,.15);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
     z-index: 999;
     gap: 0px;
   }
@@ -142,5 +150,4 @@ html {
     margin: 0;
   }
 }
-
 </style>

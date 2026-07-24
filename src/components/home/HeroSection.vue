@@ -11,7 +11,7 @@
       </div>
 
       <h1 class="name-title mt-3"><span>Vit</span> Socheata</h1>
-      <p class="description">Whether you're looking to discuss a new project, seek advice, or collaborate, I'm always
+      <p class="description ">Whether you're looking to discuss a new project, seek advice, or collaborate, I'm always
         excited to connect.</p>
       <BaseButton />
     </div>
@@ -98,7 +98,7 @@ import socheata from '@/assets/images/sct.JPEG'
 }
 
 .description {
-  margin-top: 20px;
+  margin: 20px 0px 35px 0px;
   padding-inline: 18px;
   color: #6b7280;
   font-size: 18px;

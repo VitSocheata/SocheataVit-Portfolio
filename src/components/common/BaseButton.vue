@@ -35,7 +35,7 @@ defineProps({
   padding: 10px 23px;
   font-size: 16px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-  color: #111827;
+  color:#475569;
 }
 
 
