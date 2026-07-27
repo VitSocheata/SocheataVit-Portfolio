@@ -2,9 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-
-        <h2 class="name-title">Let's Build Something <span>Great Together</span></h2>
-
+        <BaseTitle ftext="Let's Build Something" ltext="Great Together"/>
         <p>
           Whether you have a project in mind, a collaboration opportunity,
           or simply want to say hello, I'd love to hear from you.
@@ -79,9 +77,6 @@
 }
 
 .footer-top h2 {
-  font-size: 52px;
-  font-weight: 700;
-  color: #111827;
   margin-bottom: 20px;
 }
 

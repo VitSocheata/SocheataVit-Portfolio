@@ -1,9 +1,8 @@
 <template>
   <section id="about" class="education-section">
     <div class="container">
-      <div class="name-title">
-        <h2>Education <br />& <span>Courses</span></h2>
-      </div>
+      <BaseTitle ftext="Education <br />&" ltext="Courses"/>
+
       <div class="education-list">
         <div
           class="education-card"

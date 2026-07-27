@@ -1,9 +1,7 @@
 <template>
   <section class="work-history">
     <div class="container">
-      <div class="name-title">
-        <h2>Work <span>History</span></h2>
-      </div>
+      <BaseTitle ftext="Work" ltext="History"/>
 
       <div class="right">
         <div
@@ -85,16 +83,7 @@ const jobs = [
   gap: 70px;
 }
 
-.name-title {
-  width: 30%;
-}
 
-.name-title h2 {
-  font-size: 56px;
-  font-weight: 700;
-  color: #111827;
-  line-height: 1.1;
-}
 
 .right {
   width: 70%;

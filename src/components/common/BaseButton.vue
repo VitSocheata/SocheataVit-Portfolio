@@ -12,7 +12,7 @@ defineProps({
   },
   link: {
     type: String,
-    default: "#"
+    default: "https://www.linkedin.com/in/socheata-vit"
   },
   icon: {
     type: String,

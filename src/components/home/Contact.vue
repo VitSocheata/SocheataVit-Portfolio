@@ -6,15 +6,13 @@
           Get In <span>Touch</span>
         </h2>
 
-        <p>
+        <p class="mb-4">
           Whether you're looking to discuss a new project, seek advice,
           or collaborate, I'm always excited to connect and explore new
           possibilities.
         </p>
 
-        <a href="mailto:youremail@example.com" class="contact-btn">
-          Get In Touch
-        </a>
+        <BaseButton text="Get In Touch" />
 
         <div class="divider">
           <span></span>
@@ -23,57 +21,43 @@
         </div>
       </div>
 
-      <!-- Contact Card -->
       <div class="contact-card">
         <form @submit.prevent="submitForm">
           <div class="grid">
 
             <div class="form-group">
               <label>Full Name</label>
-              <input
-                type="text"
-                v-model="form.name"
-                placeholder="Jane Smith"
-              />
+              <input type="text" v-model="form.name" placeholder="Jane Smith" />
             </div>
 
             <div class="form-group">
               <label>Email</label>
-              <input
-                type="email"
-                v-model="form.email"
-                placeholder="email@example.com"
-              />
+              <input type="email" v-model="form.email" placeholder="email@example.com" />
             </div>
 
             <div class="form-group">
               <label>Mobile Number</label>
-              <input
-                type="tel"
-                v-model="form.phone"
-                placeholder="+1 555 234 5678"
-              />
+              <input type="tel" v-model="form.phone" placeholder="+855 96 853 9827" />
             </div>
 
             <div class="form-group">
               <label>Subject</label>
-              <input
-                type="text"
-                v-model="form.subject"
-                placeholder="Design discussion"
-              />
+              <select v-model="form.subject" class="form-control" :class="{ 'is-placeholder': !form.subject }">
+                <option value="" disabled selected>Select your inquiry topic</option>
+                <option value="job">Job Offer / Hiring</option>
+                <option value="project">Freelance / Web Project</option>
+                <option value="collaboration">Collaboration</option>
+                <option value="robotics">Robotics Training / Education</option>
+                <option value="other">Other</option>
+              </select>
             </div>
 
             <div class="form-group full">
               <label>Message</label>
-              <textarea
-                rows="6"
-                v-model="form.message"
-                placeholder="Enter here..."
-              ></textarea>
+              <textarea rows="6" v-model="form.message" placeholder="Enter here..."></textarea>
             </div>
 
-            <button class="submit-btn">
+            <button class="submit-btn" :disabled="!isFormComplete" @click="handleSubmit">
               Submit
             </button>
 
@@ -85,7 +69,7 @@
 </template>
 
 <script setup>
-import { reactive } from "vue";
+import { reactive, computed } from "vue";
 
 const form = reactive({
   name: "",
@@ -94,12 +78,19 @@ const form = reactive({
   subject: "",
   message: "",
 });
+const isFormComplete = computed(() => {
+  return (
+    form.name.trim() !== '' &&
+    form.email.trim() !== '' &&
+    form.phone.trim() !== '' &&
+    form.subject !== '' &&
+    form.message.trim() !== ''
+  );
+});
 
 const submitForm = () => {
-  console.log(form);
-
-  alert("Message submitted successfully!");
-
+  if (!isFormComplete.value) return;
+  console.log("Form submitted successfully:", form);
   form.name = "";
   form.email = "";
   form.phone = "";
@@ -127,7 +118,7 @@ const submitForm = () => {
 
 .section-header h2 {
   font-size: 52px;
-  font-weight: 300;
+  font-weight: 700;
   color: #374151;
   margin-bottom: 18px;
 }
@@ -193,12 +184,12 @@ const submitForm = () => {
   border: 1px solid #e5e7eb;
   border-radius: 18px;
   padding: 40px;
-  box-shadow: 0 15px 40px rgba(0,0,0,.05);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, .05);
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 24px;
 }
 
@@ -215,6 +206,13 @@ label {
   margin-bottom: 8px;
   font-weight: 600;
   color: #374151;
+}
+
+.form-control {
+  color: #111827;
+}
+.form-control.is-placeholder {
+  color: #9ca3af; 
 }
 
 input,
@@ -240,7 +238,7 @@ textarea::placeholder {
 input:focus,
 textarea:focus {
   border-color: #111827;
-  box-shadow: 0 0 0 4px rgba(17,24,39,.08);
+  box-shadow: 0 0 0 4px rgba(17, 24, 39, .08);
 }
 
 textarea {
@@ -250,24 +248,29 @@ textarea {
 
 .submit-btn {
   grid-column: span 2;
-
   padding: 16px;
-
   border: none;
   border-radius: 12px;
-
-  background: #111827;
-  color: white;
-
+  background-color: #111827;
+  color: #ffffff;           
   font-size: 16px;
   font-weight: 600;
-
   cursor: pointer;
-  transition: .3s;
+  transition: all 0.3s ease;
 }
 
-.submit-btn:hover {
-  background: #000;
+.submit-btn:disabled {
+  background-color: #f3f4f6 !important; 
+  color: #9ca3af !important;            
+  cursor: not-allowed;               
+  box-shadow: none;
+  opacity: 1;
+}
+
+.submit-btn:not(:disabled):hover {
+  background-color: #1f2937; 
+  opacity: 0.95;
+  transform: translateY(-1px);
 }
 
 @media (max-width: 768px) {

@@ -1,11 +1,9 @@
 <template>
   <section id="portfolio" class="portfolio-section">
     <div class="container">
-
       <div class="section-header">
-        <h2 class="name-title">My <span>Portfolio</span></h2>
+        <BaseTitle ftext="My" ltext="Portfolio"/>
       </div>
-
       <div class="portfolio-grid">
         <div
           class="portfolio-card"

@@ -1,9 +1,7 @@
 <template>
   <section class="skill-section">
     <div class="container">
-      <div class="name-title">
-        <h2>Skill <span>Set</span></h2>
-      </div>
+      <BaseTitle ftext="Skill" ltext="Set"/>
       <div class="skill-content">
         <div class="skill-group">
           <h3>Backend</h3>
