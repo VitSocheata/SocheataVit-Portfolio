@@ -21,7 +21,7 @@ defineProps({
 .name-title h2 {
   font-size: 56px;
   font-weight: 700;
-  color: #111827;
+  color: var(--text-color);
   line-height: 1.1;
 }
 .name-title :deep(span) {

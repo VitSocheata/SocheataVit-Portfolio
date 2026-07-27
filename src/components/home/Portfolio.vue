@@ -108,21 +108,26 @@ const projects = [
 }
 
 .portfolio-card {
-  background: white;
-  border-radius: 20px;
+  background: var(--bg-color);
+  border-radius: 16px;
   overflow: hidden;
   border: 1px solid #eee;
-  transition: .3s;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
 
 .portfolio-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,.08);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  border-color: #d1d5db;
 }
 
 .project-image {
   width: 100%;
   height: 230px;
+  overflow: hidden;
+  background: #f3f4f6;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .card-content {
@@ -144,22 +149,28 @@ const projects = [
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-  margin: 20px 0;
+  gap: 8px;
+  margin-bottom: 20px;
 }
 
 .tags span {
-  padding: 8px 16px;
+ background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  color: #374151;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 12px;
   border-radius: 999px;
-  border: 1px solid #d1d5db;
-  font-size: 14px;
 }
 
 .btn-view {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #28b79a;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #111827;              
   font-weight: 600;
+  font-size: 14px;
+  text-decoration: none;
 }
+
 </style>

@@ -70,7 +70,7 @@ const educationList = [
 <style scoped>
 .education-section {
   padding: 100px 0;
-  background: #ffffff;
+  background: var(--bg-color);
 }
 
 .container {

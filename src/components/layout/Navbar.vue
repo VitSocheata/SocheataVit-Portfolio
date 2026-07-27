@@ -2,7 +2,7 @@
   <nav class="navbar-custom">
     <div class="nav-container">
       <div class="logo">
-        <img :src="logo" alt="">
+        <img :src="isDarkMode ? whiteLogo : blackLogo" alt="">
       </div>
 
       <div class="menu-toggle" @click="toggleMenu">
@@ -37,7 +37,9 @@
 
 <script setup>
 import { ref, onMounted } from 'vue';
-import logo from '@/assets/images/download.png';
+import blackLogo from '@/assets/images/download.png';
+import whiteLogo from '@/assets/images/darkmodelogo.png';
+
 
 const isMenuOpen = ref(false);
 const isDarkMode = ref(false);
@@ -78,7 +80,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  background: rgba(255, 255, 255, 0.95);
+  background: var(--bg-color);
   backdrop-filter: blur(10px);
   z-index: 1000;
   box-sizing: border-box;

@@ -59,7 +59,7 @@ const generalSkills = [
 <style scoped>
 .skill-section {
   padding: 0px 100px 0;
-  background: #fff;
+  background:var(--bg-color);
 }
 
 .container {
@@ -94,7 +94,7 @@ const generalSkills = [
 .skill-group h3 {
   font-size: 22px;
   font-weight: 600;
-  color: #374151;
+  color: var();
   margin-bottom: 20px;
 }
 

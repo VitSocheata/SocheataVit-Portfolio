@@ -69,7 +69,7 @@ const jobs = [
 <style scoped>
 .work-history {
   padding: 0px 100px 0;
-  background: #fff;
+  background: var(--bg-color);
 }
 
 .container {

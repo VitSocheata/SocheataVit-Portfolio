@@ -2,9 +2,7 @@
   <section id="contact" class="contact-section">
     <div class="container">
       <div class="section-header">
-        <h2>
-          Get In <span>Touch</span>
-        </h2>
+        <BaseTitle ftext="Get In" ltext="Touch"/>
 
         <p class="mb-4">
           Whether you're looking to discuss a new project, seek advice,
@@ -70,6 +68,7 @@
 
 <script setup>
 import { reactive, computed } from "vue";
+import BaseTitle from "../common/BaseTitle.vue";
 
 const form = reactive({
   name: "",
@@ -102,7 +101,7 @@ const submitForm = () => {
 <style scoped>
 .contact-section {
   padding: 100px 20px;
-  background: #ffffff;
+  background: var(--bg-color);
 }
 
 .container {
@@ -141,15 +140,11 @@ const submitForm = () => {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   padding: 14px 34px;
-
   border-radius: 999px;
-
   background: #111827;
   color: white;
   text-decoration: none;
-
   font-weight: 600;
   transition: .3s;
 }

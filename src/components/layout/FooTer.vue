@@ -44,7 +44,7 @@
 
 <style scoped>
 .footer {
-  background: #ffffff;
+  background: var(--bg-color);
   padding:  0px 100px 40px;
 }
 
@@ -138,17 +138,13 @@
 .social-links a {
   width: 46px;
   height: 46px;
-
   border-radius: 50%;
   border: 1px solid #e5e7eb;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   text-decoration: none;
-  color: #374151;
-
+  color: var(--text-darkblue);
   transition: 0.3s;
 }
 
