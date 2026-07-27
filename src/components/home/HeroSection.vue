@@ -135,18 +135,25 @@ onUnmounted(() => {
 }
 
 .role-subtitle {
+
   font-size: 1.5rem;
-  background: linear-gradient(135deg, var(--text-main, #374151) 0%, var(--text-muted, #9ca3af) 100%);
+
+  background: linear-gradient(135deg, #374151 0%, #9ca3af 100%);
+
   -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
+
   font-weight: 700;
+
   margin: 0px;
+
 }
 
 .role-subtitle-wrapper {
   font-size: 1.55rem;
   font-weight: 600;
-  color: #2563eb; 
+  color: #2564eb28; 
   margin: 25px;
   min-height: 30px;
   display: inline-flex;
@@ -155,7 +162,7 @@ onUnmounted(() => {
 
 .typing-cursor {
   font-weight: 300;
-  color: var(--text-main, #495057);
+  color: #495057;
   animation: blink 0.7s infinite;
   margin-left: 3px;
 }
