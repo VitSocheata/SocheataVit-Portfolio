@@ -39,13 +39,13 @@ const backendSkills = [
   "MySQL",
   "Database Design",
   "RESTful APIs",
-  "Authentication (JWT)",
+  "Authentication-JWT",
   "Middleware",
   "Git & GitHub Workflow",
 ];
 
 const generalSkills = [
-  "JavaScript (ES6+)",
+  "JavaScript",
   "Vue.js",
   "HTML5 & CSS3",
   "Responsive Design",
