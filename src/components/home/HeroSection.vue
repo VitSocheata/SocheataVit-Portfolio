@@ -1,10 +1,10 @@
 <template>
-  <div  id="home" class="hero-container">
+  <div id="home" class="hero-container">
     <div class="content text-center mt-5">
       <div class="profile-img-wrapper mb-4">
         <img :src="socheata" class="profile-img" alt="Profile" />
       </div>
-     
+
       <h1 class="name-title mt-3"><span>Vit</span> Socheata</h1>
 
       <div class="role-subtitle-wrapper">
@@ -14,7 +14,7 @@
 
       <p class="description ">Whether you're looking to discuss a new project, seek advice, or collaborate, I'm always
         excited to connect.</p>
-      <BaseButton />
+      <BaseButton text="Download CV" icon="fas fa-download" link="/Web-Development_Vit Socheata.pdf" />
     </div>
 
 
@@ -40,7 +40,7 @@ let timeoutId = null;
 
 const typeEffect = () => {
   const currentRole = roles[roleIndex];
-  
+
   if (isDeleting) {
     displayedText.value = currentRole.substring(0, charIndex - 1);
     charIndex--;
@@ -67,7 +67,7 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  clearTimeout(timeoutId); 
+  clearTimeout(timeoutId);
 });
 
 
@@ -75,7 +75,7 @@ onUnmounted(() => {
 
 <style scoped>
 .hero-container {
-  background-color: var(--bg-color, #ffffff); 
+  background-color: var(--bg-color, #ffffff);
   overflow: visible;
   padding: 100px 0px;
   position: relative;
@@ -90,8 +90,8 @@ onUnmounted(() => {
   transform: translateX(-50%);
   width: 100%;
   height: 100%;
-  background-image: 
-    linear-gradient(var(--grid-color, #f3f3f3) 1px, transparent 1px), 
+  background-image:
+    linear-gradient(var(--grid-color, #f3f3f3) 1px, transparent 1px),
     linear-gradient(90deg, var(--grid-color, #f3f3f3) 1px, transparent 1px);
   background-size: 80px 80px;
   -webkit-mask-image: radial-gradient(circle at center, black 20%, transparent 80%);
@@ -153,7 +153,7 @@ onUnmounted(() => {
 .role-subtitle-wrapper {
   font-size: 1.55rem;
   font-weight: 600;
-  color: #2564eb28; 
+  color: #2564eb28;
   margin: 25px;
   min-height: 30px;
   display: inline-flex;
@@ -168,8 +168,15 @@ onUnmounted(() => {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .description {
