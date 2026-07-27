@@ -94,7 +94,7 @@ const generalSkills = [
 .skill-group h3 {
   font-size: 22px;
   font-weight: 600;
-  color: var();
+  color: var(--color-skill);
   margin-bottom: 20px;
 }
 
