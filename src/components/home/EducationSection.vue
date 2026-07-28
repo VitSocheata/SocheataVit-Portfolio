@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="education-section">
+  <section class="education-section">
     <div class="container">
       <BaseTitle ftext="Education <br />&" ltext="Courses"/>
 

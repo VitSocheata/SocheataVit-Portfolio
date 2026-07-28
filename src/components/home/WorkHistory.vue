@@ -1,5 +1,5 @@
 <template>
-  <section class="work-history">
+  <section  id="about" class="work-history">
     <div class="container">
       <BaseTitle ftext="Work" ltext="History"/>
 
@@ -68,7 +68,7 @@ const jobs = [
 
 <style scoped>
 .work-history {
-  padding: 0px 100px 0;
+  padding: 100px 0px 0px 0px;
   background: var(--bg-color);
 }
 

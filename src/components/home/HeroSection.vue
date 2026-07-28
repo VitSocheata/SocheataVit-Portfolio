@@ -78,7 +78,7 @@ onUnmounted(() => {
 .hero-container {
   background-color: var(--bg-color, #ffffff);
   overflow: visible;
-  padding: 100px 0px;
+  padding: 100px 0px 0px 0px;
   position: relative;
   transition: background-color 0.3s ease;
 }
