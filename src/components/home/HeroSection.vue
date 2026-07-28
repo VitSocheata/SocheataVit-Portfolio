@@ -28,8 +28,9 @@ import socheata from '@/assets/images/sct.JPEG'
 const roles = [
   "Full Stack Developer",
   "Frontend Developer",
-  "Vue.js Enthusiast",
-  "Robotics Instructor"
+  "Backend Developer",
+  "Teacher Assistant Robotics",
+  "Frontend Mentor"
 ];
 
 const displayedText = ref('');
