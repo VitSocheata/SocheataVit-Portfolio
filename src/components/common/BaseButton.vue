@@ -27,7 +27,7 @@ defineProps({
   align-items: center;
   gap: 8px;
   background: var(--bg-color);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   border-radius: 50px;
   cursor: pointer;
   transition: all 0.3s ease;

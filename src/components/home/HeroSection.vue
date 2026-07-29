@@ -186,4 +186,10 @@ onUnmounted(() => {
   color: var(--text-muted, #6b7280);
   font-size: 18px;
 }
+@media (max-width: 768px) {
+  .hero-container {
+    padding: 100px 0px 20px 0px;
+  }
+
+}
 </style>

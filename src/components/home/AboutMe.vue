@@ -22,7 +22,7 @@
 
 <style scoped>
 .journey-section {
-    padding: 100px 0px 0px 0px;
+    padding: 80px 0px 0px 0px;
     background: var(--bg-color);
 }
 
@@ -89,7 +89,7 @@
 @media (max-width: 768px) {
 
     .journey-section {
-        padding: 70px 0;
+        padding: 20px 0px;
     }
 
     .journey-title h2 {

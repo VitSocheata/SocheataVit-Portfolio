@@ -68,7 +68,7 @@ const jobs = [
 
 <style scoped>
 .work-history {
-  padding: 100px 0px;
+  padding: 80px 0px 0px 0px;
   background: var(--bg-color);
 }
 
@@ -76,7 +76,6 @@ const jobs = [
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
-
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -91,10 +90,10 @@ const jobs = [
 }
 
 .work-card {
-  background: white;
+  background: var(--bg-color);
   border-radius: 20px;
   padding: 32px;
-  border: 1px solid #ececec;
+  border: 1px solid var(--border-color);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -108,11 +107,11 @@ const jobs = [
   width: 64px;
   height: 64px;
   border-radius: 28%;
-  background: #f3f4f6;
+  background: var(--bg-icons);
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
 }
 
 .company-logo img {
@@ -124,13 +123,13 @@ const jobs = [
   margin: 0;
   font-size: 26px;
   font-weight: 700;
-  color: #111827;
+  color: var(--text-color);
 }
 
 .company-info h4 {
   margin: 8px 0;
   font-size: 18px;
-  color: #374151;
+  color: var(--main-color);
   font-weight: 600;
 }
 
@@ -156,10 +155,10 @@ const jobs = [
 .tags span {
   padding: 10px 18px;
   border-radius: 999px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
   color: #6b7280;
   font-size: 14px;
-  background: #fff;
+  background: var(--bg-color);
 }
 
 @media (max-width: 992px) {
@@ -180,7 +179,7 @@ const jobs = [
 
 @media (max-width: 768px) {
   .work-history {
-    padding: 60px 0;
+    padding: 20px 0px !important;
   }
 
   .card-header {

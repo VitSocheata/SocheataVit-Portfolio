@@ -45,7 +45,7 @@
 <style scoped>
 .footer {
   background: var(--bg-color);
-  padding:  0px 100px 40px;
+  padding:  80px 0px 20px 0px;
 }
 
 .container {
@@ -57,7 +57,6 @@
 .logo img {
   width: 80px;
 }
-
 
 .footer-top {
   text-align: center;
@@ -84,24 +83,19 @@
   font-size: 18px;
   line-height: 1.8;
   color: #6b7280;
-  margin-bottom: 40px;
+  margin: 50px;
 }
 
 .contact-btn {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-
   padding: 15px 32px;
-
   border-radius: 999px;
-
   background: #111827;
   color: white;
-
   text-decoration: none;
   font-weight: 600;
-
   transition: 0.3s;
 }
 
@@ -115,8 +109,8 @@
 }
 
 .divider {
-  margin: 80px 0 35px;
-  border-top: 1px solid #e5e7eb;
+  margin: 80px 0 25px;
+  border-top: 1px solid var(--border-color);
 }
 
 .footer-bottom {
@@ -139,7 +133,7 @@
   width: 46px;
   height: 46px;
   border-radius: 50%;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -158,7 +152,7 @@
 @media (max-width: 768px) {
 
   .footer {
-    padding: 70px 0 30px;
+    padding: 20px 0 ;
   }
 
   .footer-top h2 {

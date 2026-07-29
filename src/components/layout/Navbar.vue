@@ -105,7 +105,7 @@ html {
   background: var(--bg-color);
   border-radius: 50px;
   padding: 15px 40px;
-  border: 1px solid #f0f0f0;
+  border: 1px solid var(--border-color);
   box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
 }
 

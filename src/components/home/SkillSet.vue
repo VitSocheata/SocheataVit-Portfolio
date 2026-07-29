@@ -58,7 +58,7 @@ const generalSkills = [
 
 <style scoped>
 .skill-section {
-  padding: 0px 100px 0;
+  padding:  80px 0px 0px 0px;
   background:var(--bg-color);
 }
 
@@ -86,7 +86,6 @@ const generalSkills = [
 
 .skill-content {
   width: 70%;
-
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -106,12 +105,10 @@ const generalSkills = [
 
 .tags span {
   padding: 7px 20px;
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
   border-radius: 10px;
-
-  background: #fff;
-  color: #374151;
-
+  background: var(--bg-color);
+  color: var(--main-color);
   font-size: 15px;
   font-weight: 500;
 
@@ -143,7 +140,7 @@ const generalSkills = [
 
 @media (max-width: 768px) {
   .skill-section {
-    padding: 60px 0;
+    padding: 20px 0;
   }
 
   .name-title h2 {

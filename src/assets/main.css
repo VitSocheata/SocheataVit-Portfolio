@@ -16,6 +16,7 @@
   --text-main: #111827
   --text-darkblue: #374151;
   --color-skill :#374151;
+  --bg-icons:  #f3f4f6;
 
 }
 
@@ -30,6 +31,7 @@ html.dark-theme {
   --text-darkblue: #e5e7eb;
   --color-skill :#959595;
   --main-color:#fff;
+  --bg-icons:  #22222e;
 }
 
 body {

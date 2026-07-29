@@ -67,7 +67,7 @@ const educationList = [
 
 <style scoped>
 .education-section {
-  padding: 100px 0px 0px 0px;
+  padding: 80px 0px 0px 0px;
   background: var(--bg-color);
 }
 
@@ -102,7 +102,7 @@ const educationList = [
 
 .education-card {
   background: var(--bg-color);
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border-color);
   border-radius: 18px;
   padding: 28px 32px;
   transition: 0.3s ease;
@@ -122,8 +122,8 @@ const educationList = [
   min-width: 64px;
   height: 64px;
   border-radius: 15px;
-  background: #f5f5f5;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-icons);
+  border: 1px solid var(--border-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,7 +179,7 @@ const educationList = [
 
 @media (max-width: 768px) {
   .education-section {
-    padding: 60px 0;
+    padding: 20px 0;
   }
 
   .card-header {

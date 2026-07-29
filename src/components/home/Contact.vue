@@ -100,7 +100,7 @@ const submitForm = () => {
 
 <style scoped>
 .contact-section {
-  padding: 100px 20px;
+  padding: 80px 0px 0px 0px;
   background: var(--bg-color);
 }
 
@@ -165,7 +165,7 @@ const submitForm = () => {
 .divider span {
   flex: 1;
   height: 1px;
-  background: #e5e7eb;
+  background: var(--border-color);
 }
 
 .divider p {
@@ -175,8 +175,8 @@ const submitForm = () => {
 }
 
 .contact-card {
-  background: white;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
   border-radius: 18px;
   padding: 40px;
   box-shadow: 0 15px 40px rgba(0, 0, 0, .05);
@@ -191,6 +191,7 @@ const submitForm = () => {
 .form-group {
   display: flex;
   flex-direction: column;
+  background: var(--bg-color);
 }
 
 .full {
@@ -200,11 +201,19 @@ const submitForm = () => {
 label {
   margin-bottom: 8px;
   font-weight: 600;
-  color: #374151;
+  color: var(--color-skill);
 }
 
 .form-control {
   color: #111827;
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  
+}
+
+.form-control:focus{
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
 }
 .form-control.is-placeholder {
   color: #9ca3af; 
@@ -214,15 +223,13 @@ input,
 textarea {
   width: 100%;
   padding: 14px 16px;
-
-  border: 1px solid #d1d5db;
+  border: 1px solid var(--border-color);
   border-radius: 12px;
-
   font-size: 15px;
-
   transition: .25s;
   outline: none;
   box-sizing: border-box;
+  background: var(--bg-color);
 }
 
 input::placeholder,
@@ -255,7 +262,7 @@ textarea {
 }
 
 .submit-btn:disabled {
-  background-color: #f3f4f6 !important; 
+  background-color: var(--border-color) !important; 
   color: #9ca3af !important;            
   cursor: not-allowed;               
   box-shadow: none;
@@ -270,7 +277,7 @@ textarea {
 
 @media (max-width: 768px) {
   .contact-section {
-    padding: 70px 20px;
+    padding: 20px 0px;
   }
 
   .section-header h2 {

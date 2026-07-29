@@ -83,7 +83,7 @@ const projects = [
 </script>
 <style scoped>
 .portfolio-section {
-  padding: 100px 0 0px ;
+  padding: 80px 0px 0px 0px;
 }
 
 .container {
@@ -111,7 +111,7 @@ const projects = [
   background: var(--bg-color);
   border-radius: 16px;
   overflow: hidden;
-  border: 1px solid #eee;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
 }
@@ -127,7 +127,7 @@ const projects = [
   height: 230px;
   overflow: hidden;
   background: #f3f4f6;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .card-content {
@@ -154,9 +154,9 @@ const projects = [
 }
 
 .tags span {
- background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  color: #374151;
+ background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  color: var(--main-color);
   font-size: 12px;
   font-weight: 500;
   padding: 4px 12px;
@@ -167,10 +167,17 @@ const projects = [
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: #111827;              
+  color: var(--text-color);              
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
+}
+@media (max-width: 768px) {
+  .portfolio-section {
+    padding: 20px 0;
+  }
+
+
 }
 
 </style>
