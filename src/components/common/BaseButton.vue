@@ -26,7 +26,7 @@ defineProps({
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #ffffff;
+  background: var(--bg-color);
   border: 1px solid #e5e7eb;
   border-radius: 50px;
   cursor: pointer;
@@ -35,7 +35,7 @@ defineProps({
   padding: 15px 23px;
   font-size: 16px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, .05);
-  color:#475569;
+  color:var(--main-color);
 }
 
 

@@ -1,5 +1,5 @@
 <template>
-  <section class="education-section">
+  <section id="resume" class="education-section">
     <div class="container">
       <BaseTitle ftext="Education <br />&" ltext="Courses"/>
 
@@ -19,8 +19,6 @@
               <span>{{ item.course }}</span>
             </div>
           </div>
-
-          <hr />
 
           <p class="date">{{ item.date }}</p>
 
@@ -69,7 +67,7 @@ const educationList = [
 
 <style scoped>
 .education-section {
-  padding: 100px 0;
+  padding: 100px 0px 0px 0px;
   background: var(--bg-color);
 }
 
@@ -77,7 +75,6 @@ const educationList = [
   max-width: 1200px;
   margin: auto;
   padding: 0 24px;
-
   display: flex;
   gap: 70px;
   align-items: flex-start;
@@ -104,7 +101,7 @@ const educationList = [
 }
 
 .education-card {
-  background: #fff;
+  background: var(--bg-color);
   border: 1px solid #e5e7eb;
   border-radius: 18px;
   padding: 28px 32px;
@@ -120,28 +117,27 @@ const educationList = [
   align-items: center;
   gap: 18px;
 }
+
 .logo-box {
-  width: 58px;
-  height: 58px;
-  border-radius: 12px;
+  min-width: 64px;
+  height: 64px;
+  border-radius: 15px;
   background: #f5f5f5;
   border: 1px solid #e5e7eb;
-
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .logo-box img {
-  width: 34px;
-  height: 34px;
-  object-fit: contain;
+  width: 38px;
+  height: 38px;
 }
 
 .header-content h3 {
   margin: 0;
   font-size: 22px;
-  color: #111827;
+  color: var(--text-color);
   font-weight: 700;
 }
 
@@ -152,16 +148,11 @@ const educationList = [
   display: block;
 }
 
-hr {
-  margin: 24px 0;
-  border: none;
-  border-top: 1px solid #ececec;
-}
 
 .date {
   font-size: 15px;
   color: #9ca3af;
-  margin-bottom: 14px;
+  margin: 45px 0px 20px 0px;
 }
 
 .description {
@@ -192,6 +183,7 @@ hr {
   }
 
   .card-header {
+    flex-direction: column;
     align-items: flex-start;
   }
 

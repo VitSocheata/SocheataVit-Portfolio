@@ -1,5 +1,5 @@
 <template>
-  <section  id="about" class="work-history">
+  <section  id="resume" class="work-history">
     <div class="container">
       <BaseTitle ftext="Work" ltext="History"/>
 
@@ -68,7 +68,7 @@ const jobs = [
 
 <style scoped>
 .work-history {
-  padding: 100px 0px 0px 0px;
+  padding: 100px 0px;
   background: var(--bg-color);
 }
 
@@ -82,8 +82,6 @@ const jobs = [
   align-items: flex-start;
   gap: 70px;
 }
-
-
 
 .right {
   width: 70%;
@@ -109,11 +107,12 @@ const jobs = [
 .company-logo {
   width: 64px;
   height: 64px;
-  border-radius: 50%;
+  border-radius: 28%;
   background: #f3f4f6;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #e5e7eb;
 }
 
 .company-logo img {

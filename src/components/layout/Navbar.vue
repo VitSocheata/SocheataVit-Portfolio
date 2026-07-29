@@ -11,8 +11,9 @@
 
       <div class="nav-links" :class="{ 'active': isMenuOpen }">
         <router-link to="/#home">Home</router-link>
-        <router-link to="/#portfolio">Portfolio</router-link>
         <router-link to="/#about">About Me</router-link>
+        <router-link to="/#resume">Resume</router-link>
+        <router-link to="/#portfolio">Portfolio</router-link>
         <router-link to="/#contact">Contact</router-link>
       </div>
 
@@ -101,7 +102,7 @@ html {
   display: flex;
   align-items: center;
   gap: 20px;
-  background: #fff;
+  background: var(--bg-color);
   border-radius: 50px;
   padding: 15px 40px;
   border: 1px solid #f0f0f0;
@@ -115,7 +116,7 @@ html {
 .nav-links a {
   margin: 0 15px;
   text-decoration: none;
-  color: #475569;
+  color: var(--main-color);
   font-weight: 600;
   transition: color 0.3s ease;
   font-size: 14px;

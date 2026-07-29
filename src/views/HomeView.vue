@@ -1,8 +1,9 @@
 <template>
   <div >
     <HeroSection/>
-    <MyWork/>
+    <AboutMe/>
     <EducationSection/>
+    <MyWork/>
     <SkillSet/>
     <Portfolio/>
     <Contact/>
@@ -15,5 +16,6 @@ import EducationSection from '@/components/home/EducationSection.vue';
 import SkillSet from '@/components/home/SkillSet.vue';
 import Portfolio from '@/components/home/Portfolio.vue';
 import Contact from '@/components/home/Contact.vue';
+import AboutMe from '@/components/home/AboutMe.vue';
 
 </script>

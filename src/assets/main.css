@@ -6,6 +6,7 @@
 }
 
 :root {
+  --main-color:#475569;
   --bg-color: #ffffff;
   --text-color: #111827;
   --card-bg: #ffffff;
@@ -15,6 +16,7 @@
   --text-main: #111827
   --text-darkblue: #374151;
   --color-skill :#374151;
+
 }
 
 html.dark-theme {
@@ -27,6 +29,7 @@ html.dark-theme {
   --text-main: #e5e7eb;
   --text-darkblue: #e5e7eb;
   --color-skill :#959595;
+  --main-color:#fff;
 }
 
 body {
