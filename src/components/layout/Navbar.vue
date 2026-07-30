@@ -5,9 +5,7 @@
         <img :src="isDarkMode ? whiteLogo : blackLogo" alt="">
       </div>
 
-      <div class="menu-toggle" @click="toggleMenu">
-        <span></span><span></span><span></span>
-      </div>
+     
 
       <div class="nav-links" :class="{ 'active': isMenuOpen }">
         <router-link to="/#home">Home</router-link>
@@ -17,7 +15,8 @@
         <router-link to="/#contact">Contact</router-link>
       </div>
 
-      <div class="theme-switch-wrapper">
+     <div class="nav-right-actions">
+       <div class="theme-switch-wrapper">
         <button class="theme-toggle-btn" @click="toggleTheme"
           :title="isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode'">
           <svg v-if="isDarkMode" class="theme-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
@@ -32,6 +31,11 @@
           </svg>
         </button>
       </div>
+      
+       <div class="menu-toggle" @click="toggleMenu">
+        <span></span><span></span><span></span>
+      </div>
+     </div>
     </div>
   </nav>
 </template>
@@ -183,8 +187,13 @@ html {
 @media (max-width: 768px) {
   .nav-container {
     padding:0px 20px;
+    justify-content: none;
   }
-
+.nav-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* កំណត់ចន្លោះរវាងប៊ូតុង Dark Mode និង Menu ឱ្យជិតគ្នា (អាចសារ៉េ 8px, 12px តាមត្រូវការ) */
+}
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -195,13 +204,13 @@ html {
   .menu-toggle span {
     width: 25px;
     height: 3px;
-    background: #333;
+    background: var(--text-color);
     border-radius: 2px;
   }
 
-  .theme-switch-wrapper {
+  /* .theme-switch-wrapper {
     display: none;
-  }
+  } */
 
   .nav-links {
     position: absolute;
@@ -213,7 +222,7 @@ html {
     align-items: flex-start;
     padding: 20px;
     border-radius: 15px;
-    background: white;
+    background: var(--bg-color);
     box-shadow: 0 10px 25px rgba(0, 0, 0, .15);
     z-index: 999;
     gap: 0px;
