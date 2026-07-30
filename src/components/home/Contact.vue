@@ -130,7 +130,7 @@ const submitForm = () => {
 .section-header p {
   max-width: 650px;
   margin: auto;
-  color: #6b7280;
+  color: var(--main-color);
   font-size: 17px;
   line-height: 1.8;
 }

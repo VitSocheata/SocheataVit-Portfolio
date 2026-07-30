@@ -124,7 +124,7 @@ html {
 }
 
 .nav-links a:hover {
-  color: #000000;
+  color: var(--text-color);
 }
 
 .logo img {
@@ -141,8 +141,8 @@ html {
 }
 
 .theme-toggle-btn {
-  background: #f8f9fa;
-  border: 1px solid #e5e7eb;
+  background: var(--bg-icons);
+  border: 1px solid var(--border-color);
   width: 42px;
   height: 42px;
   border-radius: 50%;
@@ -155,7 +155,7 @@ html {
 }
 
 .theme-toggle-btn:hover {
-  background: #f3f4f6;
+  background: var(--bg-icons);
   border-color: #d1d5db;
   transform: scale(1.05);
 }
@@ -163,7 +163,7 @@ html {
 .theme-icon {
   width: 20px;
   height: 20px;
-  color: #374151;
+  color: var(--text-color);
   transition: transform 0.3s ease;
 }
 

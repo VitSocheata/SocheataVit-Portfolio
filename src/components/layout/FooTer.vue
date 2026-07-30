@@ -82,7 +82,7 @@
 .footer-top p {
   font-size: 18px;
   line-height: 1.8;
-  color: #6b7280;
+  color: var(--main-color);
   margin: 50px;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .footer-bottom p {
-  color: #6b7280;
+  color: var(--main-color);
   font-size: 15px;
 }
 

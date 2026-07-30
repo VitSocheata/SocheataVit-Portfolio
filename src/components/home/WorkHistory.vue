@@ -134,14 +134,14 @@ const jobs = [
 }
 
 .date {
-  color: #9ca3af;
+  color: var(--main-color);
   font-size: 15px;
 }
 
 .description {
   margin-top: 24px;
   line-height: 1.8;
-  color: #6b7280;
+  color: var(--main-color);
   font-size: 16px;
 }
 
@@ -156,7 +156,7 @@ const jobs = [
   padding: 10px 18px;
   border-radius: 999px;
   border: 1px solid var(--border-color);
-  color: #6b7280;
+  color: var(--main-color);
   font-size: 14px;
   background: var(--bg-color);
 }

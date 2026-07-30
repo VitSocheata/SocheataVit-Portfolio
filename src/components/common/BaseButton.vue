@@ -40,7 +40,7 @@ defineProps({
 
 
 .btn-contact:hover, .btn-contact-large:hover {
-  background: #f9fafb;
+  background: var(--bg-color);
   border-color: #d1d5db;
   transform: translateY(-2px);
 }

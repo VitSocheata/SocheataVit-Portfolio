@@ -142,7 +142,7 @@ const educationList = [
 }
 
 .header-content span {
-  color: #6b7280;
+  color: var(--main-color);
   font-size: 15px;
   margin-top: 4px;
   display: block;
@@ -151,12 +151,12 @@ const educationList = [
 
 .date {
   font-size: 15px;
-  color: #9ca3af;
+  color: var(--main-color);
   margin: 45px 0px 20px 0px;
 }
 
 .description {
-  color: #6b7280;
+  color: var(--main-color);
   line-height: 1.8;
   font-size: 16px;
   margin: 0;
