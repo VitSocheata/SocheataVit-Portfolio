@@ -4,7 +4,7 @@
       <div class="section-header">
         <BaseTitle ftext="Get In" ltext="Touch"/>
 
-        <p class="mb-4">
+        <p>
           Whether you're looking to discuss a new project, seek advice,
           or collaborate, I'm always excited to connect and explore new
           possibilities.
@@ -20,27 +20,33 @@
       </div>
 
       <div class="contact-card">
+      <div class="error-alert" v-if="errorMessage">
+        {{ errorMessage }}
+      </div>
         <form @submit.prevent="submitForm">
           <div class="grid">
 
             <div class="form-group">
               <label>Full Name</label>
-              <input type="text" v-model="form.name" placeholder="Jane Smith" />
+              <input type="text" v-model="form.name" @blur="handleBlur('name')" placeholder="Jane Smith" />
+              <span class="error-text" v-if="touched.name && errors.name">{{ errors.name }}</span>
             </div>
 
             <div class="form-group">
               <label>Email</label>
-              <input type="email" v-model="form.email" placeholder="email@example.com" />
+              <input type="email" v-model="form.email" @blur="handleBlur('email')" placeholder="email@example.com" />
+              <span class="error-text" v-if="touched.email && errors.email">{{ errors.email }}</span>
             </div>
 
             <div class="form-group">
               <label>Mobile Number</label>
-              <input type="tel" v-model="form.phone" placeholder="+855 96 853 9827" />
+              <input type="tel" v-model="form.phone" @blur="handleBlur('phone')" placeholder="+855 96 853 9827" />
+              <span class="error-text" v-if="touched.phone && errors.phone">{{ errors.phone }}</span>
             </div>
 
             <div class="form-group">
               <label>Subject</label>
-              <select v-model="form.subject" class="form-control" :class="{ 'is-placeholder': !form.subject }">
+              <select v-model="form.subject" class="form-control" @blur="handleBlur('subject')" :class="{ 'is-placeholder': !form.subject }">
                 <option value="" disabled selected>Select your inquiry topic</option>
                 <option value="job">Job Offer / Hiring</option>
                 <option value="project">Freelance / Web Project</option>
@@ -48,15 +54,19 @@
                 <option value="robotics">Robotics Training / Education</option>
                 <option value="other">Other</option>
               </select>
+              <span class="error-text" v-if="touched.subject && errors.subject">{{ errors.subject }}</span>
             </div>
 
             <div class="form-group full">
               <label>Message</label>
-              <textarea rows="6" v-model="form.message" placeholder="Enter here..."></textarea>
+              <textarea rows="6" v-model="form.message" @blur="handleBlur('message')" placeholder="Enter here..."></textarea>
+              <span class="error-text" v-if="touched.message && errors.message">{{ errors.message }}</span>
             </div>
 
-            <button class="submit-btn" :disabled="!isFormComplete" @click="handleSubmit">
-              Submit
+            <button class="submit-btn" :disabled="!isFormComplete || isLoading || isSuccess" type="submit">
+              <span v-if="isLoading">Sending...</span>
+              <span v-else-if="isSuccess">Success ✓</span>
+              <span v-else>Submit</span>
             </button>
 
           </div>
@@ -67,38 +77,60 @@
 </template>
 
 <script setup>
-import { reactive, computed } from "vue";
-import BaseTitle from "../common/BaseTitle.vue";
+import { useFormValidation } from "@/composable/useFormValidation";
+import { useFormSubmit } from "@/composable/useFormSubmit";
 
-const form = reactive({
-  name: "",
-  email: "",
-  phone: "",
-  subject: "",
-  message: "",
-});
-const isFormComplete = computed(() => {
-  return (
-    form.name.trim() !== '' &&
-    form.email.trim() !== '' &&
-    form.phone.trim() !== '' &&
-    form.subject !== '' &&
-    form.message.trim() !== ''
-  );
-});
+const{ form, errors,isFormComplete, touched ,handleBlur} = useFormValidation();
+
+const sendDataToServer = async (formData) => {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
+  console.log("Data sent to backend:", formData);
+};
+
+const {isLoading,isSuccess,errorMessage,handleSubmit} = useFormSubmit(sendDataToServer);
 
 const submitForm = () => {
   if (!isFormComplete.value) return;
-  console.log("Form submitted successfully:", form);
-  form.name = "";
-  form.email = "";
-  form.phone = "";
-  form.subject = "";
-  form.message = "";
+  
+  handleSubmit(form, () => {
+    form.name = "";
+    form.email = "";
+    form.phone = "";
+    form.subject = "";
+    form.message = "";
+  
+    Object.keys(touched).forEach(key => touched[key] = false);
+  });
 };
 </script>
 
 <style scoped>
+.error-text {
+  color: #ef4444;
+  font-size: 13px;
+  margin-top: 6px;
+  display: block;
+}
+
+.error-alert {
+  background-color: #fee2e2;
+  color: #991b1b;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-align: center;
+  border: 1px solid #fecaca;
+}
+
+.success-btn {
+  background-color: #10b981 !important;
+  color: white !important;
+  border-color: #10b981 !important;
+  opacity: 1 !important;
+}
+
 .contact-section {
   padding: 80px 0px 0px 0px;
   background: var(--bg-color);
@@ -108,7 +140,6 @@ const submitForm = () => {
   max-width: 900px;
   margin: auto;
 }
-
 
 .section-header {
   text-align: center;
@@ -129,7 +160,7 @@ const submitForm = () => {
 
 .section-header p {
   max-width: 650px;
-  margin: auto;
+  margin: 30px auto;
   color: var(--main-color);
   font-size: 17px;
   line-height: 1.8;
@@ -208,13 +239,13 @@ label {
   color: #111827;
   background: var(--bg-color);
   border: 1px solid var(--border-color);
-  
 }
 
-.form-control:focus{
+.form-control:focus {
   background: var(--bg-color);
   border: 1px solid var(--border-color);
 }
+
 .form-control.is-placeholder {
   color: #9ca3af; 
 }
@@ -230,6 +261,7 @@ textarea {
   outline: none;
   box-sizing: border-box;
   background: var(--bg-color);
+  color: var(--text-color);
 }
 
 input::placeholder,
@@ -254,7 +286,7 @@ textarea {
   border: none;
   border-radius: 12px;
   background-color: #111827;
-  color: #ffffff;           
+  color: #ffffff;          
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -263,8 +295,8 @@ textarea {
 
 .submit-btn:disabled {
   background-color: var(--border-color) !important; 
-  color: #9ca3af !important;            
-  cursor: not-allowed;               
+  color: #9ca3af !important;             
+  cursor: not-allowed;              
   box-shadow: none;
   opacity: 1;
 }

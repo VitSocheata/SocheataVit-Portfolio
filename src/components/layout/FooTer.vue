@@ -83,7 +83,7 @@
   font-size: 18px;
   line-height: 1.8;
   color: var(--main-color);
-  margin: 50px;
+  margin: 30px;
 }
 
 .contact-btn {
