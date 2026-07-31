@@ -222,7 +222,6 @@ const submitForm = () => {
 .form-group {
   display: flex;
   flex-direction: column;
-  background: var(--bg-color);
 }
 
 .full {
@@ -244,6 +243,7 @@ label {
 .form-control:focus {
   background: var(--bg-color);
   border: 1px solid var(--border-color);
+  color: var(--text-color);
 }
 
 .form-control.is-placeholder {
