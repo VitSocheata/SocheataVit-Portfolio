@@ -236,7 +236,7 @@ label {
 }
 
 .form-control {
-  color: #111827;
+  color: var(--text-color);
   background: var(--bg-color);
   border: 1px solid var(--border-color);
 }
