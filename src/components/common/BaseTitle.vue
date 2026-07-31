@@ -25,6 +25,6 @@ defineProps({
   line-height: 1.1;
 }
 .name-title :deep(span) {
-  color: #6b7280;
+  color: var( --subtitle-color);
 }
 </style>

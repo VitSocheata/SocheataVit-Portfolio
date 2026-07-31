@@ -1,6 +1,6 @@
 <template>
   <div id="home" class="hero-container">
-    <div class="content text-center mt-5"  data-aos="zoom-in">
+    <div class="content text-center mt-5" data-aos="zoom-in">
       <div class="profile-img-wrapper mb-4">
         <img :src="socheata" class="profile-img" alt="Profile" />
       </div>
@@ -110,6 +110,8 @@ onUnmounted(() => {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  display: inline-block;
 }
 
 .profile-img {
@@ -117,9 +119,54 @@ onUnmounted(() => {
   height: 250px;
   border-radius: 50%;
   border: 9px solid var(--bg-color, #ffffff);
-  box-shadow: 0 0 0 2px var(--border-color, #e5e7eb);
   object-fit: cover;
   transition: border 0.3s ease;
+}
+
+.profile-img-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  padding: 9px;
+  background: linear-gradient(90deg,
+      var(--border-glow-1),
+      var(--border-glow-2),
+      var(--border-glow-3),
+      var(--border-glow-4));
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  z-index: 1;
+  animation: borderRotate 3s linear infinite;
+  pointer-events: none;
+}
+
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 9px solid var(--bg-color);
+  object-fit: cover;
+  position: relative;
+  z-index: 2;
+  transition: transform 0.3s ease;
+}
+
+
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .name-title {
@@ -132,21 +179,15 @@ onUnmounted(() => {
 }
 
 .name-title span {
-  color: #6b7280;
+  color: var( --subtitle-color);
 }
 
 .role-subtitle {
-
   font-size: 1.5rem;
-
-  background: linear-gradient(135deg, #374151 0%, #9ca3af 100%);
-
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
   -webkit-background-clip: text;
-
   -webkit-text-fill-color: transparent;
-
   font-weight: 700;
-
   margin: 0px;
 
 }
@@ -186,6 +227,7 @@ onUnmounted(() => {
   color: var(--text-muted, #6b7280);
   font-size: 18px;
 }
+
 @media (max-width: 768px) {
   .hero-container {
     padding: 100px 0px 20px 0px;

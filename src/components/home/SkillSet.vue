@@ -104,22 +104,50 @@ const generalSkills = [
 }
 
 .tags span {
-  padding: 7px 20px;
-  border: 1px solid var(--border-color);
-  border-radius: 10px;
+ position: relative;
+  padding: 8px 22px;
   background: var(--bg-color);
-  color: var(--main-color);
+  color: var(--text-color);
   font-size: 15px;
   font-weight: 500;
-
-  transition: all 0.25s ease;
+  border-radius: 12px;
   cursor: default;
+  z-index: 1;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tags span::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  padding: 1.5px;
+  background: linear-gradient(90deg, #d1d5db, #9ca3af, #e5e7eb, #6b7280); /* ពណ៌ប្រផេះប្រាក់ */
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 1;
+  animation: borderRotate 3s linear infinite;
 }
 
 .tags span:hover {
-  background: #111827;
-  color: #fff;
-  border-color: #111827;
+  transform: none;
+  box-shadow: 0 2px 6px rgba(156, 163, 175, 0.2);
+}
+
+@keyframes borderRotate {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @media (max-width: 992px) {
