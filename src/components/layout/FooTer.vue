@@ -22,7 +22,7 @@
           <a href="https://github.com/VitSocheata" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-github"></i>
           </a>
-          <a href="https://www.linkedin.com/in/socheata-vit" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/socheatavit/" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-linkedin-in"></i>
           </a>
           <a href="https://t.me/socheatavit" target="_blank" rel="noopener noreferrer">
