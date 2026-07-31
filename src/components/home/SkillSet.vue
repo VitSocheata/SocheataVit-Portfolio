@@ -2,7 +2,7 @@
   <section class="skill-section">
     <div class="container">
       <BaseTitle ftext="Skill" ltext="Set"/>
-      <div class="skill-content">
+      <div class="skill-content"  data-aos="zoom-in">
         <div class="skill-group">
           <h3>Backend</h3>
           <div class="tags">

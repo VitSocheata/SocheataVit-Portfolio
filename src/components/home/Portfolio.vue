@@ -6,7 +6,7 @@
       </div>
       <div class="portfolio-grid">
         <div
-          class="portfolio-card"
+          class="portfolio-card"  data-aos="zoom-in"
           v-for="project in displayedProjects"
           :key="project.id"
         >

@@ -4,7 +4,7 @@
             <div class="journey-title">
                 <BaseTitle ftext="About " ltext="Me" />
             </div>
-            <div class="journey-content">
+            <div class="journey-content" data-aos="zoom-in">
                 <p>
                     My journey in tech started with a passion for frontend development and building interactive web apps
                     using modern frameworks like <strong>Vue.js</strong>.

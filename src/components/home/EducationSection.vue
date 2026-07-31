@@ -3,9 +3,9 @@
     <div class="container">
       <BaseTitle ftext="Education <br />&" ltext="Courses"/>
 
-      <div class="education-list">
+      <div class="education-list " >
         <div
-          class="education-card"
+          class="education-card"  data-aos="zoom-in"
           v-for="(item, index) in educationList"
           :key="index"
         >

@@ -1,6 +1,6 @@
 <template>
   <div id="home" class="hero-container">
-    <div class="content text-center mt-5">
+    <div class="content text-center mt-5"  data-aos="zoom-in">
       <div class="profile-img-wrapper mb-4">
         <img :src="socheata" class="profile-img" alt="Profile" />
       </div>

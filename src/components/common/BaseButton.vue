@@ -1,5 +1,5 @@
 <template>
-  <a :href="link" v-bind="$attrs" class="btn-contact-large text-decoration-none" target="_blank" rel="noopener noreferrer">
+  <a :href="link" v-bind="$attrs" class="btn-contact-large text-decoration-none" target="_blank" rel="noopener noreferrer"  ">
     <i :class="icon" class="fs-4"></i> {{ text }}
   </a>
 </template>

@@ -1,7 +1,7 @@
 <template>
-  <section id="contact" class="contact-section">
+  <section id="contact" class="contact-section"  >
     <div class="container">
-      <div class="section-header">
+      <div class="section-header"  data-aos="zoom-in">
         <BaseTitle ftext="Get In" ltext="Touch"/>
 
         <p>
@@ -10,7 +10,7 @@
           possibilities.
         </p>
 
-        <BaseButton text="Get In Touch" />
+        <BaseButton text="Get In Touch" data-aos="zoom-in" />
 
         <div class="divider">
           <span></span>
@@ -19,7 +19,7 @@
         </div>
       </div>
 
-      <div class="contact-card">
+      <div class="contact-card"  data-aos="zoom-in">
       <div class="error-alert" v-if="errorMessage">
         {{ errorMessage }}
       </div>

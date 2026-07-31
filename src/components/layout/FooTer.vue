@@ -3,11 +3,11 @@
     <div class="container">
       <div class="footer-top">
         <BaseTitle ftext="Let's Build Something" ltext="Great Together"/>
-        <p>
+        <p  data-aos="zoom-in">
           Whether you have a project in mind, a collaboration opportunity,
           or simply want to say hello, I'd love to hear from you.
         </p>
-        <BaseButton />
+        <BaseButton data-aos="zoom-in"/>
       </div>
 
       <div class="divider"></div>

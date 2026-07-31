@@ -5,7 +5,7 @@
 
       <div class="right">
         <div
-          class="work-card"
+          class="work-card"  data-aos="zoom-in"
           v-for="(job, index) in jobs"
           :key="index"
         >

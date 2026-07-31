@@ -1,5 +1,5 @@
 <template>
-    <div class="name-title">
+    <div class="name-title" data-aos="zoom-in">
         <h2 v-html="ftext + ' <span>' + ltext + '</span>'"></h2>
         
     </div>
