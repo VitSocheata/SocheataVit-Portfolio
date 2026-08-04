@@ -49,7 +49,6 @@ const isDarkMode = ref(false);
 
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value;
-  console.log("តម្លៃបច្ចុប្បន្នគឺ:", isMenuOpen.value);
 };
 
 const toggleTheme = () => {

@@ -79,15 +79,11 @@
 <script setup>
 import { useFormValidation } from "@/composable/useFormValidation";
 import { useFormSubmit } from "@/composable/useFormSubmit";
+import { sendEmailWithEmailJS } from "@/services/emailService";
 
 const{ form, errors,isFormComplete, touched ,handleBlur} = useFormValidation();
 
-const sendDataToServer = async (formData) => {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
-  console.log("Data sent to backend:", formData);
-};
-
-const {isLoading,isSuccess,errorMessage,handleSubmit} = useFormSubmit(sendDataToServer);
+const {isLoading,isSuccess,errorMessage,handleSubmit} = useFormSubmit(sendEmailWithEmailJS);
 
 const submitForm = () => {
   if (!isFormComplete.value) return;
