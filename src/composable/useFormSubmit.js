@@ -25,7 +25,6 @@ export function useFormSubmit(submitAction) {
       }, 3000)
 
     } catch (error) {
-      console.error('Submission error:', error)
       errorMessage.value = 'Something went wrong. Please try again later.'
     } finally {
       isLoading.value = false
