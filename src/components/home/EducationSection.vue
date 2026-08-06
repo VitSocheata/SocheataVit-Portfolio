@@ -1,12 +1,13 @@
 <template>
   <section id="resume" class="education-section">
     <div class="container">
-      <BaseTitle firstText="Education <br />&" lastText="Courses"/>
+      <BaseTitle :firstText="$t('educationTitleFirst')" :lastText="$t('educationTitleLast')" />
 
-      <div class="education-list " >
+      <div class="education-list">
         <div
-          class="education-card"  data-aos="zoom-in"
-          v-for="(item, index) in educationList"
+          class="education-card"
+          data-aos="zoom-in"
+          v-for="(item, index) in translatedEducationList"
           :key="index"
         >
           <div class="card-header">
@@ -32,37 +33,25 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 import ruppLogo from "@/assets/images/rupp.png";
 import antLogo from "@/assets/images/ant.png";
 import chineseLogo from "@/assets/images/chinese.png";
 
-const educationList = [
-  {
-    logo: ruppLogo, 
-    school: "Royal University of Phnom Penh",
-    course: "Bachelor of Computer Science and Engineering",
-    date: "2023 - 2026",
-    description:
-      "Fourth-year student specializing in Computer Science and Engineering, focusing on software development, web technologies, and modern programming architectures.",
-  },
-    {
-    logo: chineseLogo, 
-    school: "Confucius Institute of the Royal Academy of Cambodia",
-    course: "Chinese Language Program",
-    date: "2024 - 2026", 
-    description:
-      "Completed Chinese language proficiency up to HSK Level 3, developing strong foundational listening, reading, and conversational skills.",
-  },
- {
-    logo: antLogo,
-    school: "ANT Technology Training Center",
-    course: "Web Development Trainee Scholarship",
-    date: "2025 - 2026",
-    description:
-      "Awarded a scholarship sponsored by the Ministry of Post and Telecommunications and CBRD Fund, focusing on professional web development training and hands-on coding workflows.",
-  },
+const { tm } = useI18n();
 
-];
+const logos = [ruppLogo, chineseLogo, antLogo];
+
+const translatedEducationList = computed(() => {
+  const list = tm('educationList');
+  if (!Array.isArray(list)) return [];
+  return list.map((item, index) => ({
+    ...item,
+    logo: logos[index] || ruppLogo
+  }));
+});
 </script>
 
 <style scoped>

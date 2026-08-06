@@ -1,12 +1,13 @@
 <template>
-  <section  id="resume" class="work-history">
+  <section id="resume" class="work-history">
     <div class="container">
-      <BaseTitle firstText="Work" lastText="History"/>
+      <BaseTitle :firstText="$t('workTitleFirst')" :lastText="$t('workTitleLast')"/>
 
       <div class="right">
         <div
-          class="work-card"  data-aos="zoom-in"
-          v-for="(job, index) in jobs"
+          class="work-card" 
+          data-aos="zoom-in"
+          v-for="(job, index) in translatedJobs"
           :key="index"
         >
           <div class="card-header">
@@ -37,33 +38,25 @@
 </template>
 
 <script setup>
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 import antLogo from "@/assets/images/ant.png"
 import aaaLogo from "@/assets/images/aaa.png"
 
-const jobs = [
-  {
-    logo: aaaLogo,
-    company: "Authentic Advanced Academy",
-    position: "Robotics Assistant Teacher",
-    date: "January 2026 - Present",
-    description:
-      "Assisted in guiding students through hands-on robotics projects, teaching core concepts of hardware components, sensors, and programming logic to foster analytical and problem-solving skills.",
-    category: "Robotics",
-    type: "Part Time",
-    location: "Tuol Kork, Phnom Penh",
-  },
-  {
-    logo: antLogo,
-    company: "ANT Technology Training Center",
-    position: "Mentor & Frontend Developer",
-    date: "April 2026 - Present",
-    description:
-     "Developing modern web applications using Vue.js while guiding students through frontend development concepts, best practices, and collaborative coding workflows.",
-    category: "Web Development",
-    type: "Full Time",
-    location: "Tuol Kork, Phnom Penh",
-  },
-];
+const { tm } = useI18n();
+
+const logos = [aaaLogo, antLogo];
+
+const translatedJobs = computed(() => {
+  const list = tm('jobsList');
+  if (!Array.isArray(list)) return [];
+
+  return list.map((job, index) => ({
+    ...job,
+    logo: logos[index] || aaaLogo
+  }));
+});
 </script>
 
 <style scoped>

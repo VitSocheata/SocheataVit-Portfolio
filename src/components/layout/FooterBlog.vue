@@ -2,12 +2,15 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <BaseTitle firstText="Let's Build Something" lastText="Great Together"/>
-        <p  data-aos="zoom-in">
-          Whether you have a project in mind, a collaboration opportunity,
-          or simply want to say hello, I'd love to hear from you.
+        <!-- ប្រើ BaseTitle ជាមួយ $t និង :firstText / :lastText -->
+        <BaseTitle :firstText="$t('footerTitleFirst')" :lastText="$t('footerTitleLast')"/>
+        
+        <p data-aos="zoom-in">
+          {{ $t('footerDesc') }}
         </p>
-        <BaseButton data-aos="zoom-in"/>
+        
+        <!-- បើ BaseButton មានទទួល Prop text សូមបញ្ជូនចូលតាមនេះ -->
+        <BaseButton :text="$t('footerBtn')" data-aos="zoom-in"/>
       </div>
 
       <div class="divider"></div>
@@ -15,7 +18,7 @@
       <div class="footer-bottom">
 
         <p>
-          &copy; {{ currentYear }} Vit Socheata. All rights reserved.
+          &copy; {{ currentYear }} Vit Socheata. {{ $t('footerRights') }}
         </p>
 
         <div class="social-links">
@@ -41,6 +44,7 @@
     </div>
   </footer>
 </template>
+
 <script setup>
 import { ref } from 'vue'
 

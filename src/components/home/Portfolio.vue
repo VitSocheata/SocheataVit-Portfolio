@@ -2,7 +2,7 @@
   <section id="portfolio" class="portfolio-section">
     <div class="container">
       <div class="section-header">
-        <BaseTitle firstText="My" lastText="Portfolio"/>
+        <BaseTitle :firstText="$t('portfolioTitleFirst')" :lastText="$t('portfolioTitleLast')"/>
       </div>
       <div class="portfolio-grid">
         <div
@@ -46,7 +46,7 @@
       </div>
       <div class="view-all-container">
         <button @click="toggleViewAll" class="view-all-btn">
-          {{ showAll ? 'Show Less' : 'View All' }}
+          {{ showAll ? $t('showLess') : $t('showMore') }}
         </button>
       </div>
     </div>
@@ -55,6 +55,8 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 import portfolio1 from "@/assets/images/reabList.png";
 import portfolio2 from "@/assets/images/pralong.png";
 import portfolio3 from "@/assets/images/internship.png";
@@ -62,70 +64,68 @@ import portfolio4 from "@/assets/images/movie.png";
 import portfolio5 from "@/assets/images/calculate.png";
 import portfolio6 from "@/assets/images/coming.png";
 
+const { tm } = useI18n();
 const showAll = ref(false);
 
-const projects = ref([
+const staticProjectData = [
   {
     id: 1,
-    title: "Internship Center",
-    description:
-      "A responsive static website built using HTML, CSS, and Bootstrap, featuring modern layout designs and clean UI components.",
     image: portfolio3,
     tags: ["HTML", "CSS", "Bootstrap"],
-    liveUrl:"https://ant-internship-center.vercel.app/",
+    liveUrl: "https://ant-internship-center.vercel.app/",
     link: "https://github.com/Oeun-nuphea/internship-center.git",
   },
   {
     id: 2,
-    title: "Reab List",
-    description:
-      "A dynamic productivity application built with Vue.js and JavaScript, allowing users to create, update, and manage tasks efficiently.",
     image: portfolio1,
     tags: ["JavaScript", "Vue.js", "Responsive"],
-    liveUrl:"https://reablist.vercel.app/",
+    liveUrl: "https://reablist.vercel.app/",
     link: "https://github.com/kemvanny/Vue_Project_ANT.git",
   },
   {
     id: 3,
-    title: "Pralong",
-    description:
-      "A robust backend server built with Node.js and Express, handling database connections, authentication, and RESTful API endpoints.",
     image: portfolio2,
     tags: ["Node.js", "Express", "MySQL"],
-    liveUrl:"https://qmlsystem.tdomain.work.gd/",
+    liveUrl: "https://qmlsystem.tdomain.work.gd/",
     link: "https://github.com/kemvanny/quiz_frontend.git",
   },
   {
     id: 4,
-    title: "Movie",
-    description:
-      "An interactive web application featuring full CRUD functionalities, detailed movie views, dynamic ratings, and form validations.",
     image: portfolio4,
     tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
-    liveUrl:"https://movie-management-system-pi.vercel.app/",
+    liveUrl: "https://movie-management-system-pi.vercel.app/",
     link: "https://github.com/VitSocheata/Movie-Management-System.git",
   },
   {
     id: 5, 
-    title: "Calculate",
-    description:
-      "An interactive calculation web application built with HTML, CSS, Bootstrap, and JavaScript, featuring clean UI layouts and smooth functional operations.",
     image: portfolio5,
     tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
-    liveUrl:"https://calculation-six-beige.vercel.app/",
+    liveUrl: "https://calculation-six-beige.vercel.app/",
     link: "https://github.com/VitSocheata/Calculation.git",
   },
- {
+  {
     id: 6,
-    title: "Coming Soon",
-    description:
-      "An upcoming project currently in development, featuring modern web technologies and innovative digital solutions. Stay tuned for updates!",
     image: portfolio6,
     tags: ["In Progress", "Coming Soon"],
     liveUrl: "#",
     link: "#",
   },
-]);
+];
+
+
+const projects = computed(() => {
+  const translatedList = tm('projectsList');
+  if (!Array.isArray(translatedList)) return [];
+
+  return translatedList.map((item, index) => ({
+    ...item,
+    id: staticProjectData[index]?.id || index + 1,
+    image: staticProjectData[index]?.image || portfolio6,
+    tags: staticProjectData[index]?.tags || [],
+    liveUrl: staticProjectData[index]?.liveUrl || "#",
+    link: staticProjectData[index]?.link || "#",
+  }));
+});
 
 const displayedProjects = computed(() => {
   return showAll.value ? projects.value : projects.value.slice(0, 3);

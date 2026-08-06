@@ -1,4 +1,5 @@
 import { reactive, computed } from 'vue'
+import i18n from '@/i18n' 
 
 export function useFormValidation() {
   const form = reactive({
@@ -33,35 +34,35 @@ export function useFormValidation() {
     const cleanMessage = form.message.trim()
 
     if (!cleanName) {
-      errs.name = 'Full Name is required.'
+      errs.name = i18n.global.t('errNameRequired')
     } else if (cleanName.length < 3) {
-      errs.name = 'Name must be at least 3 characters.'
+      errs.name = i18n.global.t('errNameMin')
     } else if (!REGEX.name.test(cleanName)) {
-      errs.name = 'Name can only contain letters and spaces.'
+      errs.name = i18n.global.t('errNameRegex')
     }
 
     if (!cleanEmail) {
-      errs.email = 'Email is required.'
+      errs.email = i18n.global.t('errEmailRequired')
     } else if (!REGEX.email.test(cleanEmail)) {
-      errs.email = 'Please enter a valid email address.'
+      errs.email = i18n.global.t('errEmailInvalid')
     }
 
     if (!cleanPhone) {
-      errs.phone = 'Mobile Number is required.'
+      errs.phone = i18n.global.t('errPhoneRequired')
     } else if (!REGEX.phone.test(cleanPhone)) {
-      errs.phone = 'Please enter a valid phone number digits only 9-15 numbers.'
+      errs.phone = i18n.global.t('errPhoneInvalid')
     }
 
     if (!form.subject) {
-      errs.subject = 'Please select an inquiry topic.'
+      errs.subject = i18n.global.t('errSubjectRequired')
     }
 
     if (!cleanMessage) {
-      errs.message = 'Message cannot be empty.'
+      errs.message = i18n.global.t('errMessageRequired')
     } else if (cleanMessage.length < 10) {
-      errs.message = 'Message must be at least 10 characters.'
+      errs.message = i18n.global.t('errMessageMin')
     } else if (REGEX.symbolsOnly.test(cleanMessage)) {
-      errs.message = 'Message cannot contain only symbols or spaces.'
+      errs.message = i18n.global.t('errMessageSymbols')
     }
 
     return errs

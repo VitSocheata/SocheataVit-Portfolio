@@ -1,72 +1,69 @@
 <template>
-  <section id="contact" class="contact-section"  >
+  <section id="contact" class="contact-section">
     <div class="container">
-      <div class="section-header"  data-aos="zoom-in">
-        <BaseTitle firstText="Get In" lastText="Touch"/>
+      <div class="section-header" data-aos="zoom-in">
+        <BaseTitle :firstText="$t('contactTitleFirst')" :lastText="$t('contactTitleLast')"/>
 
-        <p>
-          Whether you're looking to discuss a new project, seek advice,
-          or collaborate, I'm always excited to connect and explore new
-          possibilities.
-        </p>
+        <p>{{ $t('contactDesc') }}</p>
 
-        <BaseButton text="Get In Touch" data-aos="zoom-in" />
+        <!-- ប្ដូរ Text ក្នុង BaseButton -->
+        <BaseButton :text="$t('contactBtn')" data-aos="zoom-in" />
 
         <div class="divider">
           <span></span>
-          <p>Or</p>
+          <p>{{ $t('or') }}</p>
           <span></span>
         </div>
       </div>
 
-      <div class="contact-card"  data-aos="zoom-in">
-      <div class="error-alert" v-if="errorMessage">
-        {{ errorMessage }}
-      </div>
+      <div class="contact-card" data-aos="zoom-in">
+        <div class="error-alert" v-if="errorMessage">
+          {{ errorMessage }}
+        </div>
         <form @submit.prevent="submitForm">
           <div class="grid">
 
             <div class="form-group">
-              <label>Full Name</label>
-              <input type="text" v-model="form.name" @blur="handleBlur('name')" placeholder="Jane Smith" />
+              <label>{{ $t('formNameLabel') }}</label>
+              <input type="text" v-model="form.name" @blur="handleBlur('name')" :placeholder="$t('formNamePlaceholder')" />
               <span class="error-text" v-if="touched.name && errors.name">{{ errors.name }}</span>
             </div>
 
             <div class="form-group">
-              <label>Email</label>
-              <input type="email" v-model="form.email" @blur="handleBlur('email')" placeholder="email@example.com" />
+              <label>{{ $t('formEmailLabel') }}</label>
+              <input type="email" v-model="form.email" @blur="handleBlur('email')" :placeholder="$t('formEmailPlaceholder')" />
               <span class="error-text" v-if="touched.email && errors.email">{{ errors.email }}</span>
             </div>
 
             <div class="form-group">
-              <label>Mobile Number</label>
-              <input type="tel" v-model="form.phone" @blur="handleBlur('phone')" placeholder="+855 96 853 9827" />
+              <label>{{ $t('formPhoneLabel') }}</label>
+              <input type="tel" v-model="form.phone" @blur="handleBlur('phone')" :placeholder="$t('formPhonePlaceholder')" />
               <span class="error-text" v-if="touched.phone && errors.phone">{{ errors.phone }}</span>
             </div>
 
             <div class="form-group">
-              <label>Subject</label>
+              <label>{{ $t('formSubjectLabel') }}</label>
               <select v-model="form.subject" class="form-control" @blur="handleBlur('subject')" :class="{ 'is-placeholder': !form.subject }">
-                <option value="" disabled selected>Select your inquiry topic</option>
-                <option value="job">Job Offer / Hiring</option>
-                <option value="project">Freelance / Web Project</option>
-                <option value="collaboration">Collaboration</option>
-                <option value="robotics">Robotics Training / Education</option>
-                <option value="other">Other</option>
+                <option value="" disabled selected>{{ $t('formSubjectPlaceholder') }}</option>
+                <option value="job">{{ $t('subjectJob') }}</option>
+                <option value="project">{{ $t('subjectProject') }}</option>
+                <option value="collaboration">{{ $t('subjectCollab') }}</option>
+                <option value="robotics">{{ $t('subjectRobotics') }}</option>
+                <option value="other">{{ $t('subjectOther') }}</option>
               </select>
               <span class="error-text" v-if="touched.subject && errors.subject">{{ errors.subject }}</span>
             </div>
 
             <div class="form-group full">
-              <label>Message</label>
-              <textarea rows="6" v-model="form.message" @blur="handleBlur('message')" placeholder="Enter here..."></textarea>
+              <label>{{ $t('formMessageLabel') }}</label>
+              <textarea rows="6" v-model="form.message" @blur="handleBlur('message')" :placeholder="$t('formMessagePlaceholder')"></textarea>
               <span class="error-text" v-if="touched.message && errors.message">{{ errors.message }}</span>
             </div>
 
             <button class="submit-btn" :disabled="!isFormComplete || isLoading || isSuccess" type="submit">
-              <span v-if="isLoading">Sending...</span>
-              <span v-else-if="isSuccess">Success ✓</span>
-              <span v-else>Submit</span>
+              <span v-if="isLoading">{{ $t('btnSending') }}</span>
+              <span v-else-if="isSuccess">{{ $t('btnSuccess') }}</span>
+              <span v-else>{{ $t('btnSubmit') }}</span>
             </button>
 
           </div>
@@ -81,9 +78,9 @@ import { useFormValidation } from "@/composable/useFormValidation";
 import { useFormSubmit } from "@/composable/useFormSubmit";
 import { sendEmailWithEmailJS } from "@/services/emailService";
 
-const{ form, errors,isFormComplete, touched ,handleBlur} = useFormValidation();
 
-const {isLoading,isSuccess,errorMessage,handleSubmit} = useFormSubmit(sendEmailWithEmailJS);
+const { form, errors, isFormComplete, touched, handleBlur } = useFormValidation();
+const { isLoading, isSuccess, errorMessage, handleSubmit } = useFormSubmit(sendEmailWithEmailJS);
 
 const submitForm = () => {
   if (!isFormComplete.value) return;

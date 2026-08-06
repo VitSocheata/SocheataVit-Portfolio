@@ -1,10 +1,10 @@
 <template>
   <section class="skill-section">
     <div class="container">
-      <BaseTitle firstText="Skill" lastText="Set"/>
-      <div class="skill-content"  data-aos="zoom-in">
+      <BaseTitle :firstText="$t('skillTitleFirst')" :lastText="$t('skillTitleLast')"/>
+      <div class="skill-content" data-aos="zoom-in">
         <div class="skill-group">
-          <h3>Backend</h3>
+          <h3>{{ $t('backendTitle') }}</h3>
           <div class="tags">
             <span
               v-for="(skill, index) in backendSkills"
@@ -15,7 +15,7 @@
           </div>
         </div>
         <div class="skill-group">
-          <h3>Frontend</h3>
+          <h3>{{ $t('frontendTitle') }}</h3>
 
           <div class="tags">
             <span
@@ -26,34 +26,26 @@
             </span>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 </template>
 
 <script setup>
-const backendSkills = [
-  "Node.js",
-  "Express.js",
-  "MySQL",
-  "Database Design",
-  "RESTful APIs",
-  "Authentication-JWT",
-  "Middleware",
-  "Git & GitHub Workflow",
-];
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-const generalSkills = [
-  "JavaScript",
-  "Vue.js",
-  "HTML5 & CSS3",
-  "Responsive Design",
-  "Problem Solving",
-  "API Integration",
-  "Team Collaboration",
-  "Debugging",
-];
+const { tm } = useI18n();
+
+const backendSkills = computed(() => {
+  const list = tm('backendSkills');
+  return Array.isArray(list) ? list : [];
+});
+
+const generalSkills = computed(() => {
+  const list = tm('generalSkills');
+  return Array.isArray(list) ? list : [];
+});
 </script>
 
 <style scoped>

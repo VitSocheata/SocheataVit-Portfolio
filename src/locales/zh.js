@@ -13,5 +13,145 @@ export default {
     "后端开发工程师",
     "机器人助教",
     "前端导师"
-  ]
+  ],
+  aboutMeText: "我的科技之旅始于对前端开发的热情，并喜欢使用像 <strong>Vue.js</strong> 这样现代的框架构建交互式网络应用。我在全栈项目方面拥有实践经验，专注于整洁的 UI/UX、响应式设计和高效的数据库集成。除了编程，我还很喜欢以<strong>机器人助教</strong>和<strong>前端导师</strong>的身份分享知识，指导学生掌握编程基础。我致力于不断学习，并打造能够解决现实问题有意义的数字体验。",
+  aboutTitleFirst: "关于 ",
+  aboutTitleLast: "我",
+  educationTitleFirst: "教育 <br />与",
+  educationTitleLast: "课程",
+  educationList: [
+    {
+      school: "金边皇家大学",
+      course: "计算机科学与工程学士学位",
+      date: "2023 - 2026",
+      description: "计算机科学与工程专业大四学生，专注于软件开发、网络技术和现代编程架构。"
+    },
+    {
+      school: "柬埔寨皇家科学院孔子学院",
+      course: "中文语言项目",
+      date: "2024 - 2026",
+      description: "完成至HSK三级中文水平，培养了扎实的听力、阅读和日常会话基础能力。"
+    },
+    {
+      school: "ANT 技术培训中心",
+      course: "网页开发实习生奖学金",
+      date: "2025 - 2026",
+      description: "获得由邮电部和CBRD基金会赞助的奖学金，专注于专业网页开发培训和实际编码工作流程。"
+    }
+  ],
+  workTitleFirst: "工作",
+  workTitleLast: "经历",
+  jobsList: [
+    {
+      company: "Authentic Advanced Academy",
+      position: "机器人助教",
+      date: "2026年1月 - 至今",
+      description: "协助指导学生进行实际的机器人项目，教授硬件组件、传感器和编程逻辑的核心概念，培养分析和解决问题的能力。",
+      category: "机器人技术",
+      type: "兼职",
+      location: "金边市堆谷区",
+    },
+    {
+      company: "ANT 技术培训中心",
+      position: "导师兼前端开发工程师",
+      date: "2026年4月 - 至今",
+      description: "使用 Vue.js 开发现代网络应用程序，同时指导学生掌握前端开发概念、最佳实践和协作编码工作流程。",
+      category: "网页开发",
+      type: "全职",
+      location: "金边市堆谷区",
+    }
+  ],
+  skillTitleFirst: "技能",
+  skillTitleLast: "专长",
+  backendTitle: "后端",
+  frontendTitle: "前端",
+  backendSkills: [
+    "Node.js",
+    "Express.js",
+    "MySQL",
+    "数据库设计",
+    "RESTful APIs",
+    "JWT 认证",
+    "中间件",
+    "Git & GitHub 工作流"
+  ],
+  generalSkills: [
+    "JavaScript",
+    "Vue.js",
+    "HTML5 & CSS3",
+    "响应式设计",
+    "问题解决",
+    "API 集成",
+    "团队协作",
+    "调试 "
+  ],
+  portfolioTitleFirst: "我的",
+  portfolioTitleLast: "作品集",
+  showMore: "查看全部",
+  showLess: "收起",
+  projectsList: [
+    {
+      title: "实习中心",
+      description: "使用 HTML、CSS 和 Bootstrap 构建的响应式静态网站，具有现代布局设计和整洁的 UI 组件。",
+    },
+    {
+      title: "Reab List 任务清单",
+      description: "使用 Vue.js 和 JavaScript 构建的动态生产力应用程序，允许用户高效创建、更新和管理任务。",
+    },
+    {
+      title: "Pralong 测验系统",
+      description: "使用 Node.js 和 Express 构建的强大后端服务器，处理数据库连接、身份验证和 RESTful API 端点。",
+    },
+    {
+      title: "电影管理系统",
+      description: "一个交互式网页应用程序，具有完整的 CRUD 功能、详细的电影视图、动态评分和表单验证。",
+    },
+    {
+      title: "计算器应用",
+      description: "使用 HTML、CSS、Bootstrap 和 JavaScript 构建的交互式计算网页应用，具有整洁的 UI 布局和流畅的操作。",
+    },
+    {
+      title: "敬请期待",
+      description: "正在开发中的即将推出的项目，采用现代网络技术和创新的数字解决方案。敬请期待更新！",
+    }
+  ],
+  contactTitleFirst: "联系",
+  contactTitleLast: "我",
+  contactDesc: "无论您是想讨论新项目、寻求建议还是合作，我都非常乐意与您联系并探索新的可能性。",
+  contactBtn: "联系我",
+  or: "或",
+  formNameLabel: "全名",
+  formNamePlaceholder: "张三",
+  formEmailLabel: "电子邮件",
+  formEmailPlaceholder: "email@example.com",
+  formPhoneLabel: "手机号码",
+  formPhonePlaceholder: "+855 96 853 9827",
+  formSubjectLabel: "主题",
+  formSubjectPlaceholder: "选择您的咨询主题",
+  subjectJob: "提供工作 / 招聘",
+  subjectProject: "自由职业 / 网页项目",
+  subjectCollab: "合作",
+  subjectRobotics: "机器人培训 / 教育",
+  subjectOther: "其他",
+  formMessageLabel: "留言",
+  formMessagePlaceholder: "在此输入...",
+  btnSending: "发送中...",
+  btnSuccess: "成功 ✓",
+  btnSubmit: "提交",
+  errNameRequired: '请输入您的全名。',
+  errNameMin: '姓名必须至少包含3个字符。',
+  errNameRegex: '姓名只能包含字母和空格。',
+  errEmailRequired: '请输入电子邮件。',
+  errEmailInvalid: '请输入有效的电子邮件地址。',
+  errPhoneRequired: '请输入手机号码。',
+  errPhoneInvalid: '请输入有效的9到15位数字Phone。',
+  errSubjectRequired: '请选择咨询主题。',
+  errMessageRequired: '留言内容不能为空。',
+  errMessageMin: '留言必须至少包含10个字符。',
+  errMessageSymbols: '留言不能仅包含符号或空格。',
+  footerTitleFirst: "让我们携手打造",
+  footerTitleLast: "伟大的作品",
+  footerDesc: "无论您是有项目想法、合作机会，还是只想打个招呼，我都非常乐意倾听您的声音。",
+  footerBtn: "联系我",
+  footerRights: "版权所有。"
 }
