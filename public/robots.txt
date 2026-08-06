@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://socheata-vit-portfolio.netlify.app/sitemap.xml
