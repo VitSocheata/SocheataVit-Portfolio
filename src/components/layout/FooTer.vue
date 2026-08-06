@@ -15,7 +15,7 @@
       <div class="footer-bottom">
 
         <p>
-          © 2026 Vit Socheata. All rights reserved.
+          &copy; {{ currentYear }} Vit Socheata. All rights reserved.
         </p>
 
         <div class="social-links">
@@ -41,7 +41,11 @@
     </div>
   </footer>
 </template>
+<script setup>
+import { ref } from 'vue'
 
+const currentYear = ref(new Date().getFullYear())
+</script>
 <style scoped>
 .footer {
   background: var(--bg-color);
