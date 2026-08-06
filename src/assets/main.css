@@ -8,7 +8,7 @@
 :root {
   --main-color:#6b7280;
   --bg-color: #ffffff;
-  --text-color: #111827;
+  --text-color: #111827e5;
   --card-bg: #ffffff;
   --border-color: #e5e7eb;
   --grid-color: #f3f3f3;
@@ -49,7 +49,7 @@ html.dark-theme {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+    font-family: "Inter", "Kantumruy Pro", sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;

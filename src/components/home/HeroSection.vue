@@ -5,32 +5,37 @@
         <img src="@/assets/images/sct.JPEG" class="profile-img" alt="Profile" />
       </div>
 
-      <h1 class="name-title mt-3"><span>Vit</span> Socheata</h1>
+      <h1 class="name-title mt-3"><span>{{ $t('myName').split(' ')[0] }}</span> {{ $t('myName').split(' ').slice(1).join(' ') }}</h1>
 
       <div class="role-subtitle-wrapper">
         <span class="role-subtitle">{{ displayedText }}</span>
         <span class="typing-cursor">|</span>
       </div>
 
-      <p class="description ">Whether you're looking to discuss a new project, seek advice, or collaborate, I'm always
-        excited to connect.</p>
-      <BaseButton text="Download CV" icon="fas fa-download" link="/Web-Development_Vit Socheata.pdf" />
+     
+      <p class="description">{{ $t("description") }}</p>
+      
+      <BaseButton :text="$t('downloadCV')" icon="fas fa-download" link="/Web-Development_Vit Socheata.pdf" />
     </div>
-
-
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref, computed, onMounted, onUnmounted, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-const roles = [
-  "Full Stack Developer",
-  "Frontend Developer",
-  "Backend Developer",
-  "Teacher Assistant Robotics",
-  "Frontend Mentor"
-];
+const { tm, locale } = useI18n();
+
+const roles = computed(() => {
+  const translatedRoles = tm('roles');
+  return Array.isArray(translatedRoles) ? translatedRoles : [
+    "Full Stack Developer",
+    "Frontend Developer",
+    "Backend Developer",
+    "Teacher Assistant Robotics",
+    "Frontend Mentor"
+  ];
+});
 
 const displayedText = ref('');
 let roleIndex = 0;
@@ -39,7 +44,14 @@ let isDeleting = false;
 let timeoutId = null;
 
 const typeEffect = () => {
-  const currentRole = roles[roleIndex];
+  const currentRoles = roles.value;
+  if (!currentRoles.length) return;
+
+  if (roleIndex >= currentRoles.length) {
+    roleIndex = 0;
+  }
+
+  const currentRole = currentRoles[roleIndex];
 
   if (isDeleting) {
     displayedText.value = currentRole.substring(0, charIndex - 1);
@@ -55,23 +67,32 @@ const typeEffect = () => {
     isDeleting = true;
   } else if (isDeleting && charIndex === 0) {
     isDeleting = false;
-    roleIndex = (roleIndex + 1) % roles.length;
+    roleIndex = (roleIndex + 1) % currentRoles.length;
     typingSpeed = 500;
   }
 
   timeoutId = setTimeout(typeEffect, typingSpeed);
 };
 
+
+watch(locale, () => {
+  if (timeoutId) clearTimeout(timeoutId);
+  roleIndex = 0;
+  charIndex = 0;
+  isDeleting = false;
+  displayedText.value = '';
+  typeEffect();
+});
+
 onMounted(() => {
   typeEffect();
 });
 
 onUnmounted(() => {
-  clearTimeout(timeoutId);
+  if (timeoutId) clearTimeout(timeoutId);
 });
-
-
 </script>
+
 
 <style scoped>
 .hero-container {

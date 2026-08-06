@@ -195,8 +195,7 @@ html {
   display: flex;
   align-items: center;
   gap: 12px;
-  /* z-index:100; */
-  /* position: relative; */
+
 }
 
 .nav-links a {
@@ -366,6 +365,7 @@ html {
     flex-direction: column;
     gap: 5px;
     cursor: pointer;
+   
   }
 
   .menu-toggle span {
@@ -373,6 +373,7 @@ html {
     height: 3px;
     background: var(--text-color);
     border-radius: 2px;
+
   }
 
   .nav-links {
