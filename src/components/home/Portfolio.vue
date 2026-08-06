@@ -2,7 +2,7 @@
   <section id="portfolio" class="portfolio-section">
     <div class="container">
       <div class="section-header">
-        <BaseTitle ftext="My" ltext="Portfolio"/>
+        <BaseTitle firstText="My" lastText="Portfolio"/>
       </div>
       <div class="portfolio-grid">
         <div

@@ -2,7 +2,7 @@
     <section id="about" class="journey-section">
         <div class="container">
             <div class="journey-title">
-                <BaseTitle ftext="About " ltext="Me" />
+                <BaseTitle firstText="About " lastText="Me" />
             </div>
             <div class="journey-content" data-aos="zoom-in">
                 <p>

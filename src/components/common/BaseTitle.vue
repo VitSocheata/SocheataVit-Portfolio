@@ -1,16 +1,16 @@
 <template>
     <div class="name-title" data-aos="zoom-in">
-        <h2 v-html="ftext + ' <span>' + ltext + '</span>'"></h2>
+        <h2 v-html="firstText + ' <span>' + lastText + '</span>'"></h2>
         
     </div>
 </template>
 <script setup>
 defineProps({
-    ftext:{
+    firstText:{
         type:String,
         default:"Work"
     },
-    ltext:{
+    lastText:{
         type:String,
         default: "History"
     }

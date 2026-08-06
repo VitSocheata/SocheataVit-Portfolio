@@ -2,7 +2,7 @@
   <section id="contact" class="contact-section"  >
     <div class="container">
       <div class="section-header"  data-aos="zoom-in">
-        <BaseTitle ftext="Get In" ltext="Touch"/>
+        <BaseTitle firstText="Get In" lastText="Touch"/>
 
         <p>
           Whether you're looking to discuss a new project, seek advice,

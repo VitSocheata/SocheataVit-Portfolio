@@ -1,7 +1,7 @@
 <template>
   <section class="skill-section">
     <div class="container">
-      <BaseTitle ftext="Skill" ltext="Set"/>
+      <BaseTitle firstText="Skill" lastText="Set"/>
       <div class="skill-content"  data-aos="zoom-in">
         <div class="skill-group">
           <h3>Backend</h3>

@@ -2,7 +2,7 @@
   <div id="home" class="hero-container">
     <div class="content text-center mt-5" data-aos="zoom-in">
       <div class="profile-img-wrapper mb-4">
-        <img :src="socheata" class="profile-img" alt="Profile" />
+        <img src="@/assets/images/sct.JPEG" class="profile-img" alt="Profile" />
       </div>
 
       <h1 class="name-title mt-3"><span>Vit</span> Socheata</h1>
@@ -23,7 +23,6 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
-import socheata from '@/assets/images/sct.JPEG'
 
 const roles = [
   "Full Stack Developer",

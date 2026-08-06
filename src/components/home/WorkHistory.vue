@@ -1,7 +1,7 @@
 <template>
   <section  id="resume" class="work-history">
     <div class="container">
-      <BaseTitle ftext="Work" ltext="History"/>
+      <BaseTitle firstText="Work" lastText="History"/>
 
       <div class="right">
         <div

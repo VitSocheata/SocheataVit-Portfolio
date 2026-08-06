@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-top">
-        <BaseTitle ftext="Let's Build Something" ltext="Great Together"/>
+        <BaseTitle firstText="Let's Build Something" lastText="Great Together"/>
         <p  data-aos="zoom-in">
           Whether you have a project in mind, a collaboration opportunity,
           or simply want to say hello, I'd love to hear from you.
