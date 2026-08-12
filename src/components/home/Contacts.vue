@@ -6,7 +6,6 @@
 
         <p>{{ $t('contactDesc') }}</p>
 
-        <!-- ប្ដូរ Text ក្នុង BaseButton -->
         <BaseButton :text="$t('contactBtn')" data-aos="zoom-in" />
 
         <div class="divider">
