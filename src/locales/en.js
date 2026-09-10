@@ -51,7 +51,7 @@ export default {
       description: "Assisted in guiding students through hands-on robotics projects, teaching core concepts of hardware components, sensors, and programming logic to foster analytical and problem-solving skills.",
       category: "Robotics",
       type: "Part Time",
-      location: "Tuol Kork, Phnom Penh"
+      location: "OCIC, Phnom Penh"
     },
     {
       company: "ANT Technology Training Center",
@@ -61,6 +61,15 @@ export default {
       category: "Web Development",
       type: "Full Time",
       location: "Tuol Kork, Phnom Penh"
+    },
+    {
+      company: "POLYGRAM",
+      position: "Junior Web Developer",
+      date: "September 2026 - Present",
+      description: "Developing and maintaining scalable full-stack web applications using Angular for the frontend architecture and Node.js for backend services, RESTful APIs, and database integration.",
+      category: "Web Development",
+      type: "Full Time",
+      location: "Toul Tom Poung, Phnom Penh"
     }
   ],
   skillTitleFirst: "Skill",

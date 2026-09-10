@@ -43,10 +43,11 @@ import { useI18n } from 'vue-i18n';
 
 import antLogo from "@/assets/images/ant.png"
 import aaaLogo from "@/assets/images/aaa.png"
+import proxyLogo from "@/assets/images/proxy.png"
 
 const { tm } = useI18n();
 
-const logos = [aaaLogo, antLogo];
+const logos = [aaaLogo, antLogo,proxyLogo];
 
 const translatedJobs = computed(() => {
   const list = tm('jobsList');
