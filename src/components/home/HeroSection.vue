@@ -15,7 +15,7 @@
      
       <p class="description">{{ $t("description") }}</p>
       
-      <BaseButton :text="$t('downloadCV')" icon="fas fa-download" link="/Web-Development_Vit Socheata.pdf" />
+      <BaseButton :text="$t('downloadCV')" icon="fas fa-download" link="" />
     </div>
   </div>
 </template>
