@@ -54,7 +54,7 @@ export default {
     {
       company: "ANT 技术培训中心",
       position: "导师兼前端开发工程师",
-      date: "2026年4月 - 至今",
+      date: "2026年4月 - 2026年8月",
       description: "使用 Vue.js 开发现代网络应用程序，同时指导学生掌握前端开发概念、最佳实践和协作编码工作流程。",
       category: "网页开发",
       type: "全职",

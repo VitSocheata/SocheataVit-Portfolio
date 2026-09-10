@@ -56,7 +56,7 @@ export default {
     {
       company: "ANT Technology Training Center",
       position: "Mentor & Frontend Developer",
-      date: "April 2026 - Present",
+      date: "April 2026 - August 2026",
       description: "Developing modern web applications using Vue.js while guiding students through frontend development concepts, best practices, and collaborative coding workflows.",
       category: "Web Development",
       type: "Full Time",
