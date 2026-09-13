@@ -57,7 +57,7 @@ export default {
       company: "ANT Technology Training Center",
       position: "Mentor & Frontend Developer",
       date: "April 2026 - August 2026",
-      description: "Developing modern web applications using Vue.js while guiding students through frontend development concepts, best practices, and collaborative coding workflows.",
+      description: "Building modern web applications with Vue.js while instructing students in frontend development principles, industry best practices, and collaborative coding workflows.",
       category: "Web Development",
       type: "Full Time",
       location: "Tuol Kork, Phnom Penh"
@@ -66,7 +66,7 @@ export default {
       company: "POLYGRAM",
       position: "Junior Web Developer",
       date: "September 2026 - Present",
-      description: "Developing and maintaining scalable full-stack web applications using Angular for the frontend architecture and Node.js for backend services, RESTful APIs, and database integration.",
+      description: "Designing, developing, and maintaining scalable full-stack web applications, encompassing modern frontend architectures, robust backend services, RESTful APIs, and comprehensive database integration.",
       category: "Web Development",
       type: "Full Time",
       location: "Toul Tom Poung, Phnom Penh"
