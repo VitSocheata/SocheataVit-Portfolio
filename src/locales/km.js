@@ -60,15 +60,15 @@ export default {
       type: "ពេញម៉ោង ",
       location: "ទួលគោក, ភ្នំពេញ"
     },
-    {
-      company: "POLYGRAM",
-      position: "អ្នកអភិវឌ្ឍន៍គេហទំព័រ",
-      date: "ខែកញ្ញា ឆ្នាំ ២០២៦ - បច្ចុប្បន្ន",
-      description: "អភិវឌ្ឍ និងថែទាំកម្មវិធីវេបសាយ Full-stack ដែលមានលក្ខណៈទូលំទូលាយ ដោយប្រើប្រាស់ Angular សម្រាប់ផ្នែក Frontend និង Node.js សម្រាប់ផ្នែក Backend, RESTful APIs និងការតភ្ជាប់មូលដ្ឋានទិន្នន័យ",
-      category: "ការអភិវឌ្ឍវេបសាយកម្រិតដំបូង",
-      type: "ពេញម៉ោង ",
-      location: "ទួលទំពូង, ភ្នំពេញ"
-    }
+    // {
+    //   company: "POLYGRAM",
+    //   position: "អ្នកអភិវឌ្ឍន៍គេហទំព័រ",
+    //   date: "ខែកញ្ញា ឆ្នាំ ២០២៦ - បច្ចុប្បន្ន",
+    //   description: "អភិវឌ្ឍ និងថែទាំកម្មវិធីវេបសាយ Full-stack ដែលមានលក្ខណៈទូលំទូលាយ ដោយប្រើប្រាស់ Angular សម្រាប់ផ្នែក Frontend និង Node.js សម្រាប់ផ្នែក Backend, RESTful APIs និងការតភ្ជាប់មូលដ្ឋានទិន្នន័យ",
+    //   category: "ការអភិវឌ្ឍវេបសាយកម្រិតដំបូង",
+    //   type: "ពេញម៉ោង ",
+    //   location: "ទួលទំពូង, ភ្នំពេញ"
+    // }
   ],
   skillTitleFirst: "ជំនាញ",
   skillTitleLast: "បច្ចេកទេស",

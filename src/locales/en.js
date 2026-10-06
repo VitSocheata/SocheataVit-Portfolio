@@ -62,15 +62,15 @@ export default {
       type: "Full Time",
       location: "Tuol Kork, Phnom Penh"
     },
-    {
-      company: "POLYGRAM",
-      position: "Junior Web Developer",
-      date: "September 2026 - Present",
-      description: "Designing, developing, and maintaining scalable full-stack web applications, encompassing modern frontend architectures, robust backend services, RESTful APIs, and comprehensive database integration.",
-      category: "Web Development",
-      type: "Full Time",
-      location: "Toul Tom Poung, Phnom Penh"
-    }
+    // {
+    //   company: "POLYGRAM",
+    //   position: "Junior Web Developer",
+    //   date: "September 2026 - Present",
+    //   description: "Designing, developing, and maintaining scalable full-stack web applications, encompassing modern frontend architectures, robust backend services, RESTful APIs, and comprehensive database integration.",
+    //   category: "Web Development",
+    //   type: "Full Time",
+    //   location: "Toul Tom Poung, Phnom Penh"
+    // }
   ],
   skillTitleFirst: "Skill",
   skillTitleLast: "Set",

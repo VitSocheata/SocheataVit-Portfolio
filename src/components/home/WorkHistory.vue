@@ -43,11 +43,11 @@ import { useI18n } from 'vue-i18n';
 
 import antLogo from "@/assets/images/ant.png"
 import aaaLogo from "@/assets/images/aaa.png"
-import polygramLogo from "@/assets/images/polygram.png"
+// import polygramLogo from "@/assets/images/polygram.png"
 
 const { tm } = useI18n();
 
-const logos = [aaaLogo, antLogo,polygramLogo];
+const logos = [aaaLogo, antLogo];
 
 const translatedJobs = computed(() => {
   const list = tm('jobsList');

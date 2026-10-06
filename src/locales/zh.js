@@ -60,15 +60,15 @@ export default {
       type: "全职",
       location: "金边市堆谷区",
     },
-     {
-      company: "POLYGRAM",
-      position: "网页开发工程师",
-      date: "2026年9月 - 至今",
-      description: "使用Angular前端架构和Node.js后端服务、RESTful API以及数据库集成，开发和维护可扩展的全栈Web应用程序。",
-      category: "初级网页开发",
-      type: "全职",
-      location: "金边吐汤蓬",
-    }
+    //  {
+    //   company: "POLYGRAM",
+    //   position: "网页开发工程师",
+    //   date: "2026年9月 - 至今",
+    //   description: "使用Angular前端架构和Node.js后端服务、RESTful API以及数据库集成，开发和维护可扩展的全栈Web应用程序。",
+    //   category: "初级网页开发",
+    //   type: "全职",
+    //   location: "金边吐汤蓬",
+    // }
   ],
   skillTitleFirst: "技能",
   skillTitleLast: "专长",
