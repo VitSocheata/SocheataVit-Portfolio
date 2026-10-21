@@ -22,6 +22,10 @@ const router = createRouter({
         }
       ]
     },
+    { path: '/contact', redirect: '/#contact' },
+    { path: '/about', redirect: '/#about' },
+    { path: '/resume', redirect: '/#resume' },
+    { path: '/portfolio', redirect: '/#portfolio' },
     {
       path: '/:pathMatch(.*)*',
       name: 'not-found',

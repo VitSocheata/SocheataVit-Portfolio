@@ -5,9 +5,14 @@
 </template>
 
 <script setup>
-import { onMounted } from 'vue'
+import { onMounted, nextTick } from 'vue'
 
 onMounted(() => {
+  nextTick(() => {
+    if (typeof window !== 'undefined' && window.AOS) {
+      window.AOS.refresh()
+    }
+  })
   document.addEventListener('contextmenu', (e) => {
     e.preventDefault()
   })
