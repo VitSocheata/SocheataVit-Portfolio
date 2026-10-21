@@ -9,14 +9,12 @@ export default {
   downloadCV: "Download CV",
   myName: "Vit Socheata",
   roles: [
-    "Full Stack Developer",
+    "Junior Developer",
     "Frontend Developer",
     "Backend Developer",
-    "Teacher Assistant Robotics",
-    "Frontend Mentor",
   ],
   aboutMeText:
-    "My journey in tech started with a passion for frontend development and building interactive web apps using modern frameworks like <strong>Vue.js</strong>. I have hands-on experience in full-stack projects, focusing on clean UI/UX, responsive design, and efficient database integration. Besides coding, I love sharing knowledge as a <strong>Robotics Assistant Teacher</strong> and <strong>Frontend Mentor</strong>, guiding students through programming fundamentals. I am committed to continuous learning and building meaningful digital experiences that solve real-world problems.",
+    "I might not consider myself an expert yet, but I have a deep passion for technology and a relentless drive to become one. For me, coding is a journey of continuous learning, curiosity, and problem-solving. I embrace every challenge as an opportunity to sharpen my skills, learn from mistakes, and push my boundaries. My goal is to turn this genuine enthusiasm into real-world expertise and craft digital experiences that make a meaningful impact.",
   aboutTitleFirst: "About ",
   aboutTitleLast: "Me",
   educationTitleFirst: "Education <br />&",
@@ -38,7 +36,7 @@ export default {
       school: "ANT Technology Training Center",
       course: "Web Development Trainee Scholarship",
       date: "2025 - 2026",
-      description: "Awarded a scholarship sponsored by the Ministry of Post and Telecommunications and CBRD Fund, focusing on professional web development training and hands-on coding workflows."
+      description: "Awarded a scholarship sponsored by the CBRD Fund of the Ministry of Post and Telecommunications, focusing on professional web development training and hands-on coding workflows."
     }
   ],
   workTitleFirst: "Work",
@@ -48,7 +46,7 @@ export default {
       company: "Authentic Advanced Academy",
       position: "Robotics Assistant Teacher",
       date: "January 2026 - Present",
-      description: "Assisted in guiding students through hands-on robotics projects, teaching core concepts of hardware components, sensors, and programming logic to foster analytical and problem-solving skills.",
+      description: "Guiding students through basic coding and simple sensor projects using Scratch and Micro:bit.",
       category: "Robotics",
       type: "Part Time",
       location: "OCIC, Phnom Penh"
@@ -57,20 +55,20 @@ export default {
       company: "ANT Technology Training Center",
       position: "Mentor & Frontend Developer",
       date: "April 2026 - August 2026",
-      description: "Building modern web applications with Vue.js while instructing students in frontend development principles, industry best practices, and collaborative coding workflows.",
+      description: "Developing web interfaces with Vue.js and supporting students in frontend fundamentals.",
       category: "Web Development",
       type: "Full Time",
       location: "Tuol Kork, Phnom Penh"
     },
-    // {
-    //   company: "POLYGRAM",
-    //   position: "Junior Web Developer",
-    //   date: "September 2026 - Present",
-    //   description: "Designing, developing, and maintaining scalable full-stack web applications, encompassing modern frontend architectures, robust backend services, RESTful APIs, and comprehensive database integration.",
-    //   category: "Web Development",
-    //   type: "Full Time",
-    //   location: "Toul Tom Poung, Phnom Penh"
-    // }
+    {
+      company: "POLYGRAM",
+      position: "Junior Developer",
+      date: "September 2026 - Present",
+      description: "Contributing to web application development and collaborating on frontend and backend features.",
+      category: "Web Development",
+      type: "Full Time",
+      location: "Toul Tom Poung, Phnom Penh"
+    }
   ],
   skillTitleFirst: "Skill",
   skillTitleLast: "Set",
@@ -80,21 +78,16 @@ export default {
     "Node.js",
     "Express.js",
     "MySQL",
-    "Database Design",
-    "RESTful APIs",
-    "Authentication-JWT",
-    "Middleware",
-    "Git & GitHub Workflow"
+    "MongoDB",
+    "Git & GitHub"
   ],
   generalSkills: [
+    "HTML5",
+    "CSS3",
+    "Bootstrap",
     "JavaScript",
     "Vue.js",
-    "HTML5 & CSS3",
-    "Responsive Design",
-    "Problem Solving",
-    "API Integration",
-    "Team Collaboration",
-    "Debugging"
+    "Angular"
   ],
   portfolioTitleFirst: "My",
   portfolioTitleLast: "Portfolio",

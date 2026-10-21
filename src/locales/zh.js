@@ -14,7 +14,7 @@ export default {
     "机器人助教",
     "前端导师"
   ],
-  aboutMeText: "我的科技之旅始于对前端开发的热情，并喜欢使用像 <strong>Vue.js</strong> 这样现代的框架构建交互式网络应用。我在全栈项目方面拥有实践经验，专注于整洁的 UI/UX、响应式设计和高效的数据库集成。除了编程，我还很喜欢以<strong>机器人助教</strong>和<strong>前端导师</strong>的身份分享知识，指导学生掌握编程基础。我致力于不断学习，并打造能够解决现实问题有意义的数字体验。",
+  aboutMeText: "我或许并非天生优秀，但我对<strong>科技怀有无比炽热的热情</strong>，并始终怀着渴望突破、追求卓越的心。对我而言，编程是一场关于求知、探索与持续成长的旅程。我将每一个挑战都视作磨练技术的机会，坚持在实践中吸取经验，努力将这份热爱转化为<strong>过硬的专业能力</strong>，打造真正有价值的数字体验。",
   aboutTitleFirst: "关于 ",
   aboutTitleLast: "我",
   educationTitleFirst: "教育 <br />与",
@@ -36,7 +36,7 @@ export default {
       school: "ANT 技术培训中心",
       course: "网页开发实习生奖学金",
       date: "2025 - 2026",
-      description: "获得由邮电部和CBRD基金会赞助的奖学金，专注于专业网页开发培训和实际编码工作流程。"
+      description: "获得由邮电部CBRD基金会赞助的奖学金，专注于专业网页开发培训和实际编码工作流程。"
     }
   ],
   workTitleFirst: "工作",
@@ -46,7 +46,7 @@ export default {
       company: "Authentic Advanced Academy",
       position: "机器人助教",
       date: "2026年1月 - 至今",
-      description: "协助指导学生进行实际的机器人项目，教授硬件组件、传感器和编程逻辑的核心概念，培养分析和解决问题的能力。",
+      description: "辅导学生使用 Scratch 和 Micro:bit 进行基础编程，以及简单传感器的实践操作。",
       category: "机器人技术",
       type: "兼职",
       location: "金边 OCIC",
@@ -55,44 +55,39 @@ export default {
       company: "ANT 技术培训中心",
       position: "导师兼前端开发工程师",
       date: "2026年4月 - 2026年8月",
-      description: "使用 Vue.js 开发现代网络应用程序，同时指导学生掌握前端开发概念、最佳实践和协作编码工作流程。",
+      description: "参与基于 Vue.js 的网页界面开发，并协助辅导学员掌握前端基础。",
       category: "网页开发",
       type: "全职",
       location: "金边市堆谷区",
     },
-    //  {
-    //   company: "POLYGRAM",
-    //   position: "网页开发工程师",
-    //   date: "2026年9月 - 至今",
-    //   description: "使用Angular前端架构和Node.js后端服务、RESTful API以及数据库集成，开发和维护可扩展的全栈Web应用程序。",
-    //   category: "初级网页开发",
-    //   type: "全职",
-    //   location: "金边吐汤蓬",
-    // }
+     {
+      company: "POLYGRAM",
+      position: "网页开发工程师",
+      date: "2026年9月 - 至今",
+      description: "参与 Web 应用程序开发，协作推进前端与后端功能的实现。",
+      category: "初级网页开发",
+      type: "全职",
+      location: "金边吐汤蓬",
+    }
   ],
   skillTitleFirst: "技能",
   skillTitleLast: "专长",
   backendTitle: "后端",
   frontendTitle: "前端",
-  backendSkills: [
+   backendSkills: [
     "Node.js",
     "Express.js",
     "MySQL",
-    "数据库设计",
-    "RESTful APIs",
-    "JWT 认证",
-    "中间件",
-    "Git & GitHub 工作流"
+    "MongoDB",
+    "Git & GitHub"
   ],
   generalSkills: [
+    "HTML5",
+    "CSS3",
+    "Bootstrap",
     "JavaScript",
     "Vue.js",
-    "HTML5 & CSS3",
-    "响应式设计",
-    "问题解决",
-    "API 集成",
-    "团队协作",
-    "调试 "
+    "Angular"
   ],
   portfolioTitleFirst: "我的",
   portfolioTitleLast: "作品集",
