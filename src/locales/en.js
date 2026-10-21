@@ -127,7 +127,7 @@ export default {
   formNameLabel: "Full Name",
   formNamePlaceholder: "Jane Smith",
   formEmailLabel: "Email",
-  formEmailPlaceholder: "email@example.com",
+  formEmailPlaceholder: "email{'@'}example.com",
   formPhoneLabel: "Mobile Number",
   formPhonePlaceholder: "+855 96 853 9827",
   formSubjectLabel: "Subject",

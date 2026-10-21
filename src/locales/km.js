@@ -127,7 +127,7 @@ export default {
   formNameLabel: "ឈ្មោះពេញ",
   formNamePlaceholder: "ឧ.អា នីតា",
   formEmailLabel: "អ៊ីមែល",
-  formEmailPlaceholder: "email@example.com",
+  formEmailPlaceholder: "email{'@'}example.com",
   formPhoneLabel: "លេខទូរស័ព្ទ",
   formPhonePlaceholder: "+855 96 853 9827",
   formSubjectLabel: "ប្រធានបទ",

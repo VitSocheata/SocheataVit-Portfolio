@@ -127,7 +127,7 @@ export default {
   formNameLabel: "全名",
   formNamePlaceholder: "张三",
   formEmailLabel: "电子邮件",
-  formEmailPlaceholder: "email@example.com",
+  formEmailPlaceholder: "email{'@'}example.com",
   formPhoneLabel: "手机号码",
   formPhonePlaceholder: "+855 96 853 9827",
   formSubjectLabel: "主题",
